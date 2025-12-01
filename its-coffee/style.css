@@ -1,0 +1,924 @@
+#header {
+    display: block;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    display: block;
+    width: 100px;
+    height: 25px;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 3px;
+    color: red;
+}
+
+button:hover {
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+button:active {
+    background-color: black;
+}
+
+button a {
+    text-decoration: none;
+    color: red;
+}
+
+#logo {
+    display: block;
+    height: 280px;
+    max-width: 100%;
+    text-align: center;
+}
+
+#logo img {
+    height: 280px;
+}
+
+#container {
+    text-align: center;
+}
+
+#nav {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 2%;
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#nav li {
+    display: inline;
+    margin: 3%;
+}
+
+#nav a {
+    text-decoration: none;
+    color: black;
+}
+
+#nav a:hover {
+    color: white;
+    background-color: brown;
+    padding: 2%;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+#wrapper {
+    margin-top: 10%;
+    max-width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#brand {
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    text-align: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: brown;
+    color: white;
+    padding: 1%;
+    border-radius: 8px 8px 0 0 ;
+    font-size: .75rem;
+}
+
+#brand-image {
+    display: block;
+    margin: auto;
+}
+
+#brand-image img {
+    max-width: 100px;
+}
+
+
+#text {
+    display: block;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    text-align: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: brown;
+    color: white;
+    padding: 1%;
+    border-radius: 0 0 8px 8px;
+}
+
+#brands-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 5%;
+    font-weight: bolder;
+}
+
+#top-brands {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+
+#top-brands img{
+    max-width: auto;
+    max-height: 400px;
+    mix-blend-mode: multiply;
+    padding: 3%;
+}
+
+
+#purpose {
+    display: block;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 90%;
+    padding: 3%;
+    background-color: brown;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    margin-top: 3%;
+}
+
+#type-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 5%;
+    font-weight: bolder;
+}
+
+#coffee-types {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+
+#coffee-types img {
+    display: block;
+    max-width: auto;
+    mix-blend-mode: multiply;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 150px;
+    padding: 5%;
+}
+
+#coffee-image {
+    display: block;
+    width:  100%;
+    margin: auto;
+}
+
+#coffee-image:hover {
+    background-color: lightgray;
+}
+
+#top-seller-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 5%;
+    font-weight: bolder;
+}
+
+#top-sellers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#top-sellers img {
+    display: block;
+    max-width: 80%;
+    mix-blend-mode: multiply;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+    max-height: 100px;
+    border-radius: 8px;
+}
+
+#top-sell-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 2%;
+}
+
+#top-sell-image:hover {
+    background-color: lightgray;
+}
+
+#details, #brand-name, #price {
+    font-size: 1rem;
+}
+
+button {
+    margin-top: auto;
+}
+
+#coffee-maker-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 5%;
+    font-weight: bolder;
+}
+
+#coffee-makers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+
+#coffee-makers img {
+    display: block;
+    max-width: 80%;
+    mix-blend-mode: multiply;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+    max-height: 150px;
+}
+
+#coffee-maker-image {
+    padding: 3%;
+}
+
+#coffee-maker-image:hover {
+    background-color: lightgray;
+}
+
+#price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: brown;
+}
+
+footer {
+    text-align: center;
+    margin-top: 5%;
+}
+
+#nespresso-logo {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: whitesmoke;
+    mix-blend-mode: multiply;
+    border-radius: 8px;
+}
+
+#nespresso-logo img {
+    display: block;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: whitesmoke;
+    mix-blend-mode: multiply;
+}
+
+#nespresso-text {
+    display: block;
+    max-width: 90%;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: brown;
+    padding: 1%;
+    border-radius: 8px;
+}
+
+#nespresso-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-top: 2%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
+}
+
+#nespresso-grid img {
+    display: block;
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    mix-blend-mode: multiply;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+
+#nespresso-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+#nespresso-item:hover {
+    background-color: lightgray;
+}
+
+#nespresso-machine-text {
+    display: block;
+    max-width: 90%;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: brown;
+    padding: 1%;
+    border-radius: 8px;
+}
+
+#nespresso-machines {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-top: 2%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3%;
+}
+
+#nespresso-machines img {
+    display: block;
+    max-width: auto;
+    height: 300px;
+    mix-blend-mode: multiply;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+
+#nespresso-machine-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+#why-nespresso-text {
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#why-nespresso {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    color: white;
+    background-color: brown;
+    padding: 2%;
+    max-width: 90%;
+    border-radius: 8px;
+    letter-spacing: 0.1rem;
+}
+
+#other-options-text {
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#other-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 1%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    padding: 1%;
+}
+
+#other-options img {
+    display: block;
+    max-width: auto;
+    max-height: 100px;
+    mix-blend-mode: multiply;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+
+#other-option-item:hover {
+    background-color: lightgray;
+}
+
+a {
+    text-decoration: none;
+    color: #ff0000;
+}
+
+#coffee-header-logo {
+    display: block;
+    max-width: 100%;
+    max-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: whitesmoke;
+    mix-blend-mode: multiply;
+    border-radius: 8px;
+}
+
+#coffee-header-logo img {
+    display: block;
+    max-width: 100%;
+    max-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: whitesmoke;
+    mix-blend-mode: multiply;
+}
+
+#searchbar {
+    display: block;
+    max-width: 100%;
+    max-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    mix-blend-mode: multiply;
+    border-radius: 8px;
+}
+
+#searchbar img {
+    display: block;
+    max-width: 100%;
+    max-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    mix-blend-mode: multiply;
+}
+
+#top-text {
+    display: block;
+    max-width: 90%;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: brown;
+    padding: 1%;
+    border-radius: 8px;
+}
+
+#five-by-four-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 1%;
+    row-gap: 3%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-top: 2%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#five-by-four-grid img {
+    display: block;
+    max-width: 80%;
+    max-height: 150px;
+    mix-blend-mode: multiply;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+
+#five-by-four-item:hover {
+    background-color: lightgray;
+}
+
+#coffee-maker-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1%;
+    row-gap: 2%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-top: 2%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#coffee-maker-grid img {
+    display: block;
+    max-width: 80%;
+    height: 150px;
+    mix-blend-mode: multiply;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+
+#coffee-maker-item {
+    height: 100%;
+    justify-content: space-between;
+}
+
+#coffee-maker-item:hover {
+    background-color: lightgray;
+}
+
+#coffee-maker-item p {
+    margin: 10px;
+}
+
+#coffee-maker-item button {
+    align-self: flex-end;
+}
+
+#five-by-four-item {
+    text-align: center;
+}
+
+#other-option-item,
+#nespresso-item,
+#nespresso-machine-item,
+#brand-image,
+#coffee-image, 
+#top-sell-image,
+#coffee-maker-image,
+#coffee-maker-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        text-align: center;
+    }
+
+
+@media only screen and (max-width: 480px) {
+    
+    #header {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+        height: auto;
+    }
+    
+    #logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    #logo img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #nav {
+    display: block;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 2%;
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#nav li {
+    display: block;
+    margin: 3%;
+}
+
+#wrapper {
+    top: 50%;
+    display: block;
+    margin-top: 10%;
+    max-width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#brand {
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    text-align: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: brown;
+    color: white;
+    padding: 3%;
+    border-radius: 8px 8px 0 0 ;
+}
+
+#text {
+    display: none;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    text-align: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: brown;
+    color: white;
+    padding: 3%;
+    border-radius: 0 0 8px 8px;
+}
+
+#brands-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 5%;
+    font-weight: bolder;
+}
+
+#top-brands {
+    display: block;
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+
+#top-brands img{
+    display: block;
+    max-width: 100%;
+    max-height: 250px;
+    mix-blend-mode: multiply;
+    margin: auto;
+}
+
+#purpose {
+    display: none;
+}
+
+#coffee-types {
+    display: block;
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+
+#coffee-types img {
+    display: block;
+    max-width: 80%;
+    max-height: 250px;
+    mix-blend-mode: multiply;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#top-sellers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+
+#top-sellers img {
+    display: block;
+    max-width: 80%;
+    mix-blend-mode: multiply;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#coffee-makers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
+    row-gap: 5%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+
+#coffee-makers img {
+    display: block;
+    max-width: 80%;
+    mix-blend-mode: multiply;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+
+footer {
+    display: block;
+    text-align: center;
+    margin-top: 10%;
+}
+
+#nespresso-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-top: 2%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nespresso-grid img {
+    display: block;
+    max-width: 80%;
+    mix-blend-mode: multiply;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+#nespresso-machines {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-top: 2%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nespresso-machines img {
+    display: block;
+    max-width: 80%;
+    max-height: 200px;
+    mix-blend-mode: multiply;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+
+#why-nespresso-text {
+    display: none;
+}
+
+#why-nespresso {
+    display: none;
+}
+
+#other-options-text {
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#other-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+
+#other-options img {
+    display: block;
+    max-width: 80%;
+    mix-blend-mode: multiply;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+
+#coffee-header-logo {
+    display: block;
+    max-width: 100%;
+    max-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: whitesmoke;
+    mix-blend-mode: multiply;
+    border-radius: 8px;
+}
+
+#coffee-header-logo img {
+    display: block;
+    max-width: 100%;
+    max-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: whitesmoke;
+    mix-blend-mode: multiply;
+}
+
+#searchbar {
+    display: block;
+    max-width: 100%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    mix-blend-mode: multiply;
+    border-radius: 8px;
+}
+
+#searchbar img {
+    display: block;
+    max-width: 100%;
+    max-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    mix-blend-mode: multiply;
+}
+
+#top-text {
+    display: block;
+    max-width: 90%;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: brown;
+    padding: 1%;
+    border-radius: 8px;
+}
+
+#five-by-four-grid {
+    display: block;
+    column-gap: 1%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-top: 2%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#five-by-four-grid img {
+    display: block;
+    max-width: 80%;
+    mix-blend-mode: multiply;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+
+
+#coffee-maker-grid {
+    display: block;
+    column-gap: 1%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-top: 2%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#coffee-maker-grid img {
+    display: block;
+    max-width: 80%;
+    mix-blend-mode: multiply;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+}
+

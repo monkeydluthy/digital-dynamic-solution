@@ -1,0 +1,128 @@
+header {
+    max-width: 100%;
+    height: 200px;
+    background-color: white;
+    z-index: 1;
+}
+
+header img {
+   width: 20%;
+   display:block;
+   float: left;
+}
+
+nav {
+    height: 200px;
+}
+
+nav ul {
+    display: inline-flex;
+    margin-top: 12%;
+    float: right;
+    font-size: 2rem;
+    margin-right: 1%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+nav li {
+    margin: auto;
+    padding: 10px;
+    list-style: none;
+}
+
+body {
+    display: block;
+   
+}
+
+div {
+    display: block;
+}
+
+.top-box {
+    width: 100%;
+    margin-top: 5%;
+    text-align: center;
+    background-color: black;
+    border-radius: 8px;
+    margin-bottom: 5%;
+}
+
+.top-text {
+    padding-top: 2%;
+    color: wheat;
+    padding-bottom: 2%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.top-text h1 {
+    font-size: 3rem;
+    
+}
+
+.top-text p {
+    font-size: 1.5rem;
+}
+
+.top-box img {
+    position: relative;
+    max-width: 100%;
+    border-radius: 8px;
+    padding-bottom: 5%;
+}
+
+.security {
+    display: block;
+    max-width: 83%;
+    background-color: lightgray;
+    margin: auto;
+    padding: 3%;
+    border-radius: 8px;
+}
+
+.why-head {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.why-text {
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: darkmagenta;
+}
+
+.brands {
+    display: block;
+    max-width: 86%;
+    margin: 5% auto;
+    background-color: lightgray;
+    padding: 2%;
+    border-radius: 8px;
+}
+
+.brand-pix {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2%;
+}
+
+.brand-pix img {
+    width: 100%;
+    margin: 2% auto;
+}
+
+.brand-item {
+    background-color: white;
+    margin-top: 5%;
+    border-radius: 8px;
+    padding: 3%;
+}
+
+.brand-text {
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}

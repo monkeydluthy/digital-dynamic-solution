@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g id="web-development" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect x="150" y="100" width="500" height="400" rx="20" fill="#2D3748"/>
+        <rect x="170" y="140" width="460" height="340" rx="10" fill="#4A5568"/>
+        <circle cx="190" cy="120" r="6" fill="#FC8181"/>
+        <circle cx="210" cy="120" r="6" fill="#F6E05E"/>
+        <circle cx="230" cy="120" r="6" fill="#68D391"/>
+        <path d="M200,200 L300,200" stroke="#A0AEC0" stroke-width="4" stroke-linecap="round"/>
+        <path d="M200,240 L400,240" stroke="#A0AEC0" stroke-width="4" stroke-linecap="round"/>
+        <path d="M200,280 L350,280" stroke="#A0AEC0" stroke-width="4" stroke-linecap="round"/>
+        <rect x="450" y="200" width="150" height="150" rx="10" fill="#2B6CB0"/>
+        <path d="M480,250 L570,250" stroke="#BEE3F8" stroke-width="4" stroke-linecap="round"/>
+        <path d="M480,280 L570,280" stroke="#BEE3F8" stroke-width="4" stroke-linecap="round"/>
+        <path d="M480,310 L570,310" stroke="#BEE3F8" stroke-width="4" stroke-linecap="round"/>
+    </g>
+</svg> 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NRL Hair</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <header>
+    <div id="head">
+      <div id="logo">
+        <img src="resources/images/nikki-logo.png" alt="NRL Logo" />
+      </div>
+      <div id="phone-logo">
+        <img src="resources/images/nrl-logo.PNG" alt="" />
+      </div>
+    </div>
+  </header>
+
+  <body>
+    <div id="main-container">
+      <div id="top-box">
+        <!-- 3 PIX - LIGHT/NIKKI/DARK -->
+        <div id="top-image">
+          <img src="resources/images/light.PNG" alt="Light Hair" />
+        </div>
+        <div id="top-image">
+          <img src="resources/images/multi.PNG" alt="Multicolor" />
+        </div>
+        <div id="top-image">
+          <img src="resources/images/blondie.PNG" alt="Blonde" />
+        </div>
+        <div id="top-image">
+          <img src="resources/images/dark.PNG" alt="Dark Hair" />
+        </div>
+      </div>
+      <div id="services">
+        <!-- Pics centered and across site of services offered -->
+        <div id="service" data-blonding>
+          <a href="blonding.html"
+            ><img src="resources/images/blonding.PNG" alt="Blonding"
+          /></a>
+          <div id="box"><p id="boxp">View Blonding Portfolio</p></div>
+          <div id="box-small">
+            <a href="blonding.html"><p>View Blonding Portfolio</p></a>
+          </div>
+        </div>
+        <div id="service" data-deadends>
+          <a href="deadends.html"
+            ><img src="resources/images/deadends.PNG" alt="Dead Ends"
+          /></a>
+          <div id="box-2"><p id="box2p">View Dead Ends Portfolio</p></div>
+          <div id="box-small">
+            <a href="deadends.html"><p>View Dead Ends Portfolio</p></a>
+          </div>
+        </div>
+        <div id="service" data-events>
+          <a href="events.html"
+            ><img src="resources/images/events.PNG" alt="Events"
+          /></a>
+          <div id="box-3"><p id="box3p">View Events Portfolio</p></div>
+          <div id="box-small">
+            <a href="events.html"><p>View Events Portfolio</p></a>
+          </div>
+        </div>
+        <div id="service" data-extensions>
+          <a href="extensions.html"
+            ><img src="resources/images/extensions.PNG" alt="Extensions"
+          /></a>
+          <div id="box-4"><p id="box4p">View Extensions Portfolio</p></div>
+          <div id="box-small">
+            <a href="extensions.html"><p>View Extensions Portfolio</p></a>
+          </div>
+        </div>
+        <div id="service" data-gloss>
+          <a href="gloss.html"
+            ><img src="resources/images/gloss-refresh.PNG" alt="Gloss Refresh"
+          /></a>
+          <div id="box-5"><p id="box5p">View Gloss Portfolio</p></div>
+          <div id="box-small">
+            <a href="gloss.html"><p>View Gloss Portfolio</p></a>
+          </div>
+        </div>
+        <div id="service" data-halfblond>
+          <a href="halfblonding.html"
+            ><img src="resources/images/halfblonding.PNG" alt="Half Blonding"
+          /></a>
+          <div id="box-6"><p id="box6p">View Half Blonding Portfolio</p></div>
+          <div id="box-small">
+            <a href="halfblonding.html"><p>View Half Blonding Portfolio</p></a>
+          </div>
+        </div>
+        <div id="service" data-keratin>
+          <a href="keratin.html"
+            ><img src="resources/images/keratin.PNG" alt="Keratin"
+          /></a>
+          <div id="box-7"><p id="box7p">View Keratin Portfolio</p></div>
+          <div id="box-small">
+            <a href="keratin.html"><p>View Keratin Portfolio</p></a>
+          </div>
+        </div>
+        <div id="service" data-roots>
+          <a href="roots.html"
+            ><img src="resources/images/roots.PNG" alt="Roots"
+          /></a>
+          <div id="box-8"><p id="box8p">View Root Retouch Portfolio</p></div>
+          <div id="box-small">
+            <a href="roots.html"><p>View Roots Portfolio</p></a>
+          </div>
+        </div>
+      </div>
+      <div id="book">
+        <button id="call">
+          <a href="tel:203-707-7335">Contact Nikki for Openings</a>
+        </button>
+      </div>
+    </div>
+
+    <footer>
+      <div id="social">
+        <div id="social-block">
+          <img src="resources/images/facebook.png" alt="Facebook" />
+          <img src="resources/images/instagram.png" alt="Instagram" />
+        </div>
+      </div>
+      <div id="bottom-logo">
+        <img src="resources/images/nikki-logo.png" alt="NRL Hair Logo" />
+      </div>
+
+      <div id="dds">
+        <p>
+          <a href="http://www.digitaldynamicsolution.com"
+            >Powered By Digital Dynamic Solution ©</a
+          >
+        </p>
+      </div>
+    </footer>
+    <script>
+      // Check if the user agent indicates a mobile device
+      var isMobile = /iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(
+        navigator.userAgent
+      );
+
+      if (!isMobile) {
+        // Load your JavaScript file if not a mobile device
+        var script = document.createElement("script");
+        script.src = "app.js";
+        document.head.appendChild(script);
+      }
+    </script>
+  </body>
+</html>

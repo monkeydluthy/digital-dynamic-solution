@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Shopping 2023</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="carousel.js" defer></script>
+    <script src="faq.js" defer></script>
+</head>
+<header>
+    <div id="header-wrapper">
+        <div id="logo">
+            <a href="index.html"><img src="resources/images/logo1.png" alt=""></a>
+        </div>
+        <div id="nav-bar">
+            <div class="dropdown">
+                <div class="select">
+                    <span class="selected">Top Deals</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                    <a href="laptops.html"><li class="active">Laptops</li></a>
+                    <a href="tv.html"><li>TVs</li></a>
+                    <a href="camera.html"><li>Cameras</li></a>
+                    <a href="games.html"><li>Gaming</li></a>
+                    <a href="clothes.html"><li>Clothing</li></a>
+                    <a href="toys.html"><li>Toys</li></a>
+                    <a href="tools.html"><li>Tools</li></a>
+                </ul>
+            </div>
+            
+            <div class="dropdown">
+                <div class="select">
+                    <span class="selected">Top Products</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                    <a href="apple-watch.html"><li class="active">Apple Watch</li></a>
+                    <a href="nintendo-switch.html"><li>Nintendo Switch</li></a>
+                    <a href="apple-airpods.html"><li>Apple Airpods</li></a>
+                    <a href="ps5.html"><li>Playstation 5</li></a>
+                    <a href="cricut.html"><li>Cricut</li></a>
+                    <a href="metaquest.html"><li>MetaQuest 2</li></a>
+                    <a href="apple-ipad.html"><li>Apple iPad</li></a>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <div>
+                    <a href="contact.html"><span class="select" data-contact>Contact</span></a>
+                </div>
+        </div>
+    </div>
+</header>
+<body>
+    <div id="wrapper">
+        <div id="top-text-box">
+            <h1>Holiday Shopping Deals for 2023</h1>
+            <p>This website is supported by deal seekers like you.  When you buy through links on our site, we may earn a commission.</p>
+        </div>
+        
+        <div id="brands">
+            <div id="brands-text">
+            <h2>Top Brands this Holiday Season</h2>
+            </div>
+            <div id="brands-grid">
+                <div id="brand-logo">
+                    <a href="apple.html"><img src="resources/images/apple_logo_black.svg_.png" alt=""></a>
+                </div>
+                <div id="brand-logo">
+                    <a href="samsung.html"><img src="resources/images/Samsung_Logo.svg.png" alt=""></a>
+                </div>
+                <div id="brand-logo">
+                    <a href="nintendo-switch.html"><img src="resources/images/nintendo-logo.png" alt=""></a>
+                </div>
+                
+                <div id="brand-logo">
+                    <a href="ps5.html"><img src="resources/images/ps5.png" alt=""></a>
+                </div>
+                <div id="brand-logo">
+                    <a href="cricut.html"><img src="resources/images/cricut-logo.png" alt=""></a>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- <div id="banner">
+            <section>
+
+                <div class="carousel" data-carousel>
+                    <button class="carousel-button prev" data-carousel-button="prev">&#8678</button>
+                    <button class="carousel-button next" data-carousel-button="next">&#8680;</button>
+                <ul data-slides>
+                    <li class="slide" data-active>
+                        <p>Some Banner Ad #1</p>
+                    </li>
+                    <li class="slide">
+                        <p>Some Banner Ad #2</p>
+                    </li>
+                    <li class="slide">
+                        <p>Some Banner Ad #3</p>
+                    </li>
+                </ul>
+            </div>
+        
+            </section>
+        </div> -->
+        
+        <div id="top-deals">
+            <!-- There will be a grid of 12 items here of the top product types -->
+            <h3>Top Deals</h3>
+            <div id="top-deals-grid">
+                <div id="deal" data-laptop>
+                    <a href="laptops.html"><img src="resources/images/apple-2023-macbook-air.jpg" alt=""></a>
+                    <p id="product-text">Laptops</p>
+                    <button id="buy"><a href="laptops.html">View All</a></button>
+                </div>
+                <div id="deal" data-tv>
+                    <a href="tv.html"><img src="resources/images/tcl-55.jpg" alt=""></a>
+                    <p id="product-text">TV</p>
+                    <button id="buy"><a href="tv.html">View All</a></button>
+                </div>
+                <div id="deal" data-cam>
+                    <a href="camera.html"><img src="resources/images/canon-eos-rebel.jpg" alt=""></a>
+                    <p id="product-text">Cameras</p>
+                    <button id="buy"><a href="camera.html">View All</a></button>
+                </div>
+                <div id="deal" data-games>
+                    <a href="games.html"><img src="resources/images/xbox-wireless.jpg" alt=""></a>
+                    <p id="product-text">Gaming</p>
+                    <button id="buy"><a href="games.html">View All</a></button>
+                </div>
+                <div id="deal" data-clothes>
+                    <a href="clothes.html"><img src="resources/images/leggings-yoga.jpg" alt=""></a>
+                    <p id="product-text">Clothing</p>
+                    <button id="buy"><a href="clothes.html">View All</a></button>
+                </div>
+                <div id="deal" data-toys>
+                    <a href="toys.html"><img src="resources/images/nerf-football.jpg" alt=""></a>
+                    <p id="product-text">Toys</p>
+                    <button id="buy"><a href="toys.html">View All</a></button>
+                </div>
+                <div id="deal" data-tools>
+                    <a href="tools.html"><img src="resources/images/dewalt-drill.jpg" alt=""></a>
+                    <p id="product-text">Tools</p>
+                    <button id="buy"><a href="tools.html">View All</a></button>
+                </div>
+                <div id="deal" data-apple>
+                    <a href="apple.html"><img src="resources/images/apple_logo_black.svg_.png" alt=""></a>
+                    <p id="product-text">Apple Products</p>
+                    <button id="buy"><a href="apple.html">View All</a></button>
+                </div>
+                <div id="deal" data-nintendo>
+                    <a href="nintendo-switch.html"><img src="resources/images/nintendo-logo.png" alt=""></a>
+                    <p id="product-text">Nintendo Switch</p>
+                    <button id="buy"><a href="nintendo-switch.html">View All</a></button>
+                </div>
+                <div id="deal" data-ps5>
+                    <a href="ps5.html"><img src="resources/images/ps5.png" alt=""></a>
+                    <p id="product-text">Playstation 5</p>
+                    <button id="buy"><a href="ps5.html">View All</a></button>
+                </div>
+                <div id="deal" data-cricut>
+                    <a href="cricut.html"><img src="resources/images/cricut-logo.png" alt=""></a>
+                    <p id="product-text">Cricut</p>
+                    <button id="buy"><a href="cricut.html">View All</a></button>
+                </div>
+                <div id="deal" data-quest>
+                    <a href="metaquest.html"><img src="resources/images/meta_quest_logo_-_wired__1_.png" alt=""></a>
+                    <p id="product-text">MetaQuest</p>
+                    <button id="buy"><a href="metaquest.html">View All</a></button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="banner">
+            <section>
+
+                <div class="carousel" data-carousel>
+                    <button class="carousel-button prev" data-carousel-button="prev">&#8678</button>
+                    <button class="carousel-button next" data-carousel-button="next">&#8680;</button>
+                <ul data-slides>
+                    <li class="slide" data-active>
+                        <a href="apple-ipad.html"><img src="resources/images/ipad-logo Small.jpeg" alt=""></a>
+                        
+                    </li>
+                    <li class="slide">
+                        <a href="ps5.html"><img src="resources/images/ps5 Small.jpeg" alt=""></a>
+                    </li>
+                    <li class="slide">
+                        <a href="samsung.html"><img src="resources/images/Samsung_Logo Small.jpeg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <p id="after-banner">Click Arrows to Scroll | Click Brand to View</p>
+        
+            </section>
+        </div>
+        
+        <div id="top-products">
+            <!-- There will be a grid of 12 items here of the top specific products -->
+            <h3>Top Products</h3>
+            <div id="top-products-grid">
+                <div id="product" data-23-air>
+                    <a href="https://amzn.to/3SZ2WyZ"><img src="resources/images/apple-2023-macbook-air.jpg" alt=""></a>
+                    <p id="product-text">Apple 2023 MacBook Air</p>
+                    <p id="price">$1229</p>
+                    <button id="buy"><a href="https://amzn.to/3SZ2WyZ">Buy It</a></button>
+                </div>
+                <div id="product" data-samsung-frame>
+                    <a href="https://amzn.to/3ReMd9M"><img src="resources/images/samsung-55.jpg" alt=""></a>
+                    <p id="product-text">Samsung 55" QLED 4K The Frame</p>
+                    <p id="price">$977.99</p>
+                    <button id="buy"><a href="https://amzn.to/3ReMd9M">Buy It</a></button>
+                </div>
+                <div id="product" data-canon>
+                    <a href="https://amzn.to/3N2wh85"><img src="resources/images/canon-eos-rebel.jpg" alt=""></a>
+                    <p id="product-text">Canon EOS Rebel T7 DSLR</p>
+                    <p id="price">$429</p>
+                    <button id="buy"><a href="https://amzn.to/3N2wh85">Buy It</a></button>
+                </div>
+                <div id="product" data-chair>
+                    <a href="https://amzn.to/47NmYkc"><img src="resources/images/gtplayer-chair.jpg" alt=""></a>
+                    <p id="product-text">GTPLAYER Gaming Chair with Footrest</p>
+                    <p id="price">$99.99</p>
+                    <button id="buy"><a href="https://amzn.to/47NmYkc">Buy It</a></button>
+                </div>
+                <div id="product" data-ipad-pro-12>
+                    <a href="https://amzn.to/3uHFUCA"><img src="resources/images/ipad-pro.jpg" alt=""></a>
+                    <p id="product-text">Apple iPad Pro - 12.9" Retina - 6th Gen</p>
+                    <p id="price">$1164.48</p>
+                    <button id="buy"><a href="https://amzn.to/3uHFUCA">Buy It</a></button>
+                </div>
+                <div id="product" data-buy-quest>
+                    <a href="https://amzn.to/46vq3Vb"><img src="resources/images/metaquest-2.jpg" alt=""></a>
+                    <p id="product-text">MetaQuest 2 - All-in-One VR Headset - 128GB</p>
+                    <p id="price">$249</p>
+                    <button id="buy"><a href="https://amzn.to/46vq3Vb">Buy It</a></button>
+                </div>
+                <div id="product" data-drill>
+                    <a href="https://amzn.to/46Ck2G6"><img src="resources/images/dewalt-drill.jpg" alt=""></a>
+                    <p id="product-text">DEWALT 20V MAX Cordless Drill & Impact</p>
+                    <p id="price">$249</p>
+                    <button id="buy"><a href="https://amzn.to/46Ck2G6">Buy It</a></button>
+                </div>
+                <div id="product" data-watch-se>
+                    <a href="https://amzn.to/47UzxdL"><img src="resources/images/apple-watch-se-2-blk.jpg" alt=""></a>
+                    <p id="product-text">Apple Watch SE - 2nd Gen - Midnight Aluminum</p>
+                    <p id="price">$275</p>
+                    <button id="buy"><a href="https://amzn.to/47UzxdL">Buy It</a></button>
+                </div>
+                <div id="product" data-oled>
+                    <a href="https://amzn.to/3uHrqTa"><img src="resources/images/switch-oled.jpg" alt=""></a>
+                    <p id="product-text">Nintendo Switch OLED</p>
+                    <p id="price">$349.99</p>
+                    <button id="buy"><a href="https://amzn.to/3uHrqTa">Buy It</a></button>
+                </div>
+                <div id="product" data-airpod-3>
+                    <a href="https://amzn.to/3uq9KLT"><img src="resources/images/apple-airpods-3.jpg" alt=""></a>
+                    <p id="product-text">Apple AirPods 3rd Gen</p>
+                    <p id="price">$164</p>
+                    <button id="buy"><a href="https://amzn.to/3uq9KLT">Buy It</a></button>
+                </div>
+                <div id="product" data-ps5-console>
+                    <a href="https://amzn.to/3GkZcjO"><img src="resources/images/ps5-console.jpg" alt=""></a>
+                    <p id="product-text">Playstation 5 Console</p>
+                    <p id="price">$479 - $575</p>
+                    <button id="buy"><a href="https://amzn.to/3GkZcjO">Buy It</button></a>
+                </div>
+                <div id="product" data-cricut-3>
+                    <a href="https://amzn.to/47Rkf9x"><img src="resources/images/cricut-maker-3.jpg" alt=""></a>
+                    <p id="product-text">Cricut Maker 3 & Digital Content Library Bundle</p>
+                    <p id="price">$429</p>
+                    <button id="buy"><a href="https://amzn.to/47Rkf9x">Buy It</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="news">
+            <!-- Grid of top 6 news stories  -->
+            <h3>Expert Savings Tips for the Holidays</h3>
+            <div id="news-grid">
+                <div id="tips" data-tip-1>
+                    <img src="resources/images/holiday-savings-1.jpeg" alt="">
+                    <p id="story"><a href="https://www.advantageccs.org/blog/7-smart-strategies-to-save-money-during-the-holiday-season/?refppc=grant&kw=&creative=656463683405&gad_source=1&gclid=Cj0KCQiA35urBhDCARIsAOU7QwnreOlHfA3aHuqcF0BmCn2QcC0N-tC1zPnwb1cnPbjrX-FO3ZyQHToaAoEiEALw_wcB">7 Smart Strategies To Save Money During The Holiday Season</a></p>
+                </div>
+                <div id="tips" data-tip-2>
+                    <img src="resources/images/holiday-savings-2.jpeg" alt="">
+                    <p id="story"><a href="https://www.cnbc.com/2023/11/22/tips-to-help-holiday-shoppers-save-money-and-avoid-debt-this-season.html">Holiday Shoppers Have the Best Discounting Season in Years</a></p>
+                </div>
+                <div id="tips" data-tip-3>
+                    <img src="resources/images/holdiay-savings-3.jpeg" alt="">
+                    <p id="story"><a href="https://www.cbsnews.com/news/black-friday-2023-holiday-spending-inflation-budget-tips/">Inflation Driving Up Gift Prices - Tips for Overspending this Holiday</a></p>
+                </div>
+                <div id="tips" data-tip-4>
+                    <img src="resources/images/holiday-savings-4.jpeg" alt="">
+                    <p id="story"><a href="https://pix11.com/pix11-partner-sponsored/money-saving-tips-and-tricks-to-get-you-ready-for-the-holiday-season-2/">Money-Saving Tips & Tricks to Get You Ready for the Holiday Season</a></p>
+                </div>
+                <div id="tips" data-tip-5>
+                    <img src="resources/images/holiday-savings-5.jpeg" alt="">
+                    <p id="story"><a href="https://news.yahoo.com/holiday-saving-tips-184736552.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAMVUBc-5jywiQuOqN8mLrOwj-P94VQm3-c-VBLYuA05uMMafLKzsGTa2RUVIq__JZAbKM7zd2y4HVXKb1tpRmvSwVNWbpI4WPHlirNuSfcP2a_oBAk9XD2Ow_1LE3gWZ-CGrs6dBzUMkAFdbsf86JMLE9_6-4kESLMGQanwkAJJZ">Cutting Costs for the Holidays</a></p>
+                </div>
+                <div id="tips" data-tip-6>
+                    <img src="resources/images/holiday-savings-6.jpeg" alt="">
+                    <p id="story"><a href="https://fortune.com/recommends/banking/how-to-build-a-holiday-budget/">How to Build a Holiday Budget</a></p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="banner">
+            <section>
+
+                <div class="carousel" data-carousel>
+                    <button class="carousel-button prev" data-carousel-button="prev">&#8678</button>
+                    <button class="carousel-button next" data-carousel-button="next">&#8680;</button>
+                <ul data-slides>
+                    <li class="slide" data-active>
+                        <a href="apple.html"><img src="resources/images/apple_logo_black.svg_ Medium Small.jpeg" alt=""></a>
+                    </li>
+                    <li class="slide">
+                        <a href="nintendo-switch.html"><img src="resources/images/nintendo-logo Small.jpeg" alt=""></a>
+                    </li>
+                    <li class="slide">
+                       <a href="cricut.html"><img src="resources/images/cricut-logo Small.jpeg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <p id="after-banner">Click Arrows to Scroll | Click Brand to View</p>
+            </section>
+        </div>
+
+
+        <section class="faq-section">
+            <h1 class="title">Everyone Wants to Save for the Holidays</h1>
+            <p id="top">At Holiday Shopping Deals, our mission is to assist you in maximizing your savings during the holiday shopping season and beyond. Our dedicated team sifts through numerous discounts offered by reliable stores to bring you only the most worthwhile deals.</p>
+            <p id="top">We prioritize your financial well-being, which is why we diligently search the internet to gather information on the ongoing sales from every retailer. Our goal is to equip you with comprehensive details, ensuring you're fully informed to save during the 2023 holiday shopping season.  To aid you in gearing up for the holiday shopping rush, we've compiled a comprehensive guide below. It covers everything you need to know, from discovering the best sales to strategizing the ideal time to embark on your shopping spree.</p>
+            
+            <ul class="faq">
+                <li>
+                    <div class="q">
+                        <span class="arrow"></span>
+                        <span>When is the best time for Holiday Shopping?</span>
+                    </div>
+                    <div class="a">
+                        <p>The best time for holiday shopping often varies depending on what you're looking for. However, there are a few general guidelines:
+                            
+                            <p><strong>Early Deals:</strong>&nbsp;&nbsp;Some retailers start offering deals as early as October or November, especially for big-ticket items like electronics or appliances. This period can be a good time to shop if you're eyeing specific products.</p>
+                            
+                            <p><strong>Black Friday:</strong>&nbsp;&nbsp; Traditionally, Black Friday, which falls on the day after Thanksgiving in the United States (late November), is known for massive discounts and doorbuster deals both online and in stores.</p>
+                            
+                            <p><strong>Cyber Monday:</strong>&nbsp;&nbsp; This comes right after Black Friday and is centered on online deals. It's an excellent time to find discounts on tech, gadgets, and online-exclusive items.</p>
+                            
+                            <p><strong>December:</strong>&nbsp;&nbsp; As the holiday season progresses, especially closer to mid-December, retailers might offer last-minute sales and discounts to attract shoppers. However, the selection might be more limited by this time.</p>
+                            
+                            <p>Ultimately, the "best" time for holiday shopping depends on your preferences, the items you're looking for, and whether you prioritize selection, savings, or convenience.</p>
+                    </div>
+                </li>
+                <!-- Duplicate the 'li' element and contents to create as many q&a elements needed -->
+                <li>
+                    <div class="q">
+                        <span class="arrow"></span>
+                        <span>How can I prepare for Holiday Shopping?</span>
+                    </div>
+                    <div class="a">
+                        <p>Preparing for holiday shopping can help make the experience smoother and more enjoyable. Here's a guide to get ready:</p>
+                        <p><strong>Set a Budget:</strong>&nbsp;&nbsp; Determine how much you're willing to spend overall and allocate amounts for different people or categories of gifts. Stick to this budget as closely as possible.</p>
+                        <p><strong>Make a List:</strong>&nbsp;&nbsp; Create a list of people you want to buy gifts for, along with gift ideas for each person. Having a plan helps avoid impulse purchases and ensures you cover everyone.</p>
+                        <p><strong>Research Deals:</strong>&nbsp;&nbsp; Keep an eye on advertisements, newsletters, and websites of your favorite stores. Look for pre-holiday sales or early bird deals to snag discounts on desired items.&nbsp;&nbsp;  This webite is a great place to see all the best deals in one place!</p>
+                        <p><strong>Self-Care:</strong>&nbsp;&nbsp; Holiday shopping can be hectic. Take breaks, stay hydrated, and remember to enjoy the process!</p>
+                        <p>By preparing in advance and staying organized, you can make holiday shopping more manageable and enjoyable, all while finding great deals and thoughtful gifts for your loved ones.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="q">
+                        <span class="arrow"></span>
+                        <span>What are some of the current Holiday Shopping Trends?</span>
+                    </div>
+                    <div class="a">
+                        <p>Holiday shopping trends can vary each year, but some patterns tend to persist. Here are some prevalent trends that often shape holiday shopping:</p>
+                        <p><strong>Early Shopping:</strong>&nbsp;&nbsp; Many consumers start their holiday shopping earlier than before, taking advantage of early deals and discounts. Retailers often extend the shopping season to capture these early buyers.</p>
+                        <p><strong>Online Shopping Dominance:</strong>&nbsp;&nbsp; The shift toward online shopping continues, with more people preferring the convenience of browsing and buying gifts from the comfort of their homes. Mobile shopping, in particular, is on the rise.</p>
+                        <p><strong>Gift Cards and Subscriptions:</strong>&nbsp;&nbsp; Gift cards and subscription services remain popular choices, offering flexibility and convenience for both givers and recipients.</p>
+                        <p><strong>Last-Minute Shopping:</strong>&nbsp;&nbsp; Despite the trend toward early shopping, there's still a surge in last-minute purchases, especially for small items or stocking stuffers.</p>
+                        <p>These trends reflect the evolving preferences and behaviors of consumers during the holiday season. Retailers often adapt their strategies to align with these trends, offering a diverse range of products and shopping experiences to cater to various shopper preferences.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="q">
+                        <span class="arrow"></span>
+                        <span>What are some of the most popular purchases this Holiday Season?</span>
+                    </div>
+                    <div class="a">
+                        <p>The most popular purchases during the holiday season can vary based on trends, consumer preferences, and evolving interests. However, some items tend to consistently rank high in sales and demand:</p>
+                        <p><strong>Electronics:</strong>&nbsp;&nbsp; Smartphones, <a href="laptops.html">laptops</a>, <a href="nintendo-switch.html">gaming consoles</a>, and other <a href="apple.html">tech gadgets</a> are perennial favorites during the holidays. New releases and discounted older models attract buyers.</p>
+                        <p><strong>Toys and Games:</strong>&nbsp;&nbsp; Especially for children, <a href="toys.html">toys</a>, board <a href="games.html">games</a>, and interactive toys tend to be highly sought after. Popular movie or TV show-themed toys often spike in sales.</p>
+                        <p><strong>Apparel and Fashion Items:</strong>&nbsp;&nbsp; <a href="clothes.html">Clothing</a>, shoes, and accessories are common gift choices. Winter clothing, festive wear, and trendy items make their way onto many shopping lists.</p>
+                        <p><strong>Any of the Top Products on Our Page:</strong>&nbsp;&nbsp;We've taken the time to review and research what the top selling and most popular products and brands this holiday season are and you can find them all throughout our website and <a href="#top-deals">on this page!</a></p>
+                        <p>These categories usually dominate holiday sales, but the specific products within these categories can change based on new releases, trends, and consumer interests each year.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+
+    </div>
+    <footer>
+        <div id="social">
+            <!-- Social Networking Icons -->
+            <a href="https://www.facebook.com/digdysol"><img src="resources/images/face-book-2.png" alt=""></a>
+            <a href="https://twitter.com/MonkeyD_Luthy"><img src="resources/images/x-logo.png" alt=""></a>
+            <a href="https://www.instagram.com/monkeyd_luthy/"><img src="resources/images/instagram.png" alt=""></a>
+            <p><a href="index.html">Home</a> | <a href="cookie-policy.html">Cookie Policy</a> | <a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact</a> | <a href="resources/images/sitemap.xml">Site Map</a></p>
+        </div>
+        <div id="dds">
+            <p><a href="http://www.digitaldynamicsolution.com">Powered By Digital Dynamic Solution ©</a></p>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+    
+</body>
+</html>

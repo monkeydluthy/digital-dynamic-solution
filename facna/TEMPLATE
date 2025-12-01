@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACNA - Tampa, FL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="header-container">
+            <div id="logo">
+                <!-- Logo for the convention -->
+            </div>
+            <div id="nav-bar">
+                <nav>
+                    <li>Home</li>
+                    <li>Register</li>
+                    <li>Venue</li>
+                    <li>Contact</li>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main container -->
+    <div id="main-container">
+        <!-- Top Box with convention name -->
+        <div id="facna">
+            <!-- FACNA:  40 YEARS OF MIRACLES -->
+        </div>
+        <div id="date">
+            <!-- DATE OF THE CONVENTION -->
+        </div>
+        
+        <!-- NEW PAGE CONTENT GOES HERE -->
+        
+        <!-- Social Media Buttons -->
+        <div id="social">
+            <!-- Facebook and instagram logos and links -->
+        </div>
+    </div>
+
+    <footer>
+        <!-- Footer box -->
+    </footer>
+</body>
+</html>
