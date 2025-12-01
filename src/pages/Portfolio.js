@@ -1,12 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { FiArrowRight } from 'react-icons/fi';
-import { IoClose } from 'react-icons/io5';
-import { BsArrowRight } from 'react-icons/bs';
-import { FaCode } from 'react-icons/fa';
-import { FaLaptopCode } from 'react-icons/fa';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 // Import portfolio images
 import nrlLogo from '../assets/images/nrl-logo.PNG';
