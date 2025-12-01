@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import aboutHero from '../assets/images/hero/about-hero.jpg';
-import companyLogo from '../assets/images/logo-black.png';
 
 // Animation variants
 const fadeInUp = {

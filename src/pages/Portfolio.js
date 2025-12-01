@@ -19,9 +19,6 @@ import allStructureLogo from '../assets/images/all-structure.png';
 import clipstrLogo from '../assets/images/clipstr-logo.png';
 import angelsWalkingLogo from '../assets/images/angels-walking.jpg';
 import portfolioHero from '../assets/images/hero/portfolio-hero.jpg';
-import companyLogo from '../assets/images/logo-black.png';
-import webdesignImage from '../assets/images/webdesign-image.jpg';
-import webDevelopment from '../assets/images/illustrations/web-development.svg';
 
 // Animation variants
 const fadeInUp = {

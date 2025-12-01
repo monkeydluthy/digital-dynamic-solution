@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import contactHero from '../assets/images/hero/contact-hero.jpg';
-import companyLogo from '../assets/images/logo-black.png';
 
 // Animation variants
 const fadeInUp = {
