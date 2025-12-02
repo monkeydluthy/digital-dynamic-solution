@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g id="digital-marketing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M400,100 C550,100 670,220 670,370 C670,520 550,640 400,640 C250,640 130,520 130,370 C130,220 250,100 400,100" fill="#4A5568"/>
+        <path d="M400,150 L400,590" stroke="#A0AEC0" stroke-width="4" stroke-linecap="round"/>
+        <path d="M250,370 L550,370" stroke="#A0AEC0" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="400" cy="370" r="20" fill="#48BB78"/>
+        <path d="M380,350 L420,390" stroke="#48BB78" stroke-width="4" stroke-linecap="round"/>
+        <path d="M420,350 L380,390" stroke="#48BB78" stroke-width="4" stroke-linecap="round"/>
+    </g>
+</svg> 

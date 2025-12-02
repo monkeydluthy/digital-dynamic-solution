@@ -1,6 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FiArrowRight } from 'react-icons/fi';
+import { IoClose } from 'react-icons/io5';
+import { BsArrowRight } from 'react-icons/bs';
+import { FaCode } from 'react-icons/fa';
+import { FaLaptopCode } from 'react-icons/fa';
 
 // Import portfolio images
 import nrlLogo from '../assets/images/nrl-logo.PNG';
@@ -10,9 +16,10 @@ import lyfestyleLogo from '../assets/images/lyfestyle-logo.png';
 import anjLogo from '../assets/images/anj-logo.png';
 import prophitLineLogo from '../assets/images/prophit-line.JPG';
 import allStructureLogo from '../assets/images/all-structure.png';
-import clipstrLogo from '../assets/images/clipstr-logo.png';
-import angelsWalkingLogo from '../assets/images/angels-walking.jpg';
 import portfolioHero from '../assets/images/hero/portfolio-hero.jpg';
+import companyLogo from '../assets/images/logo-black.png';
+import webdesignImage from '../assets/images/webdesign-image.jpg';
+import webDevelopment from '../assets/images/illustrations/web-development.svg';
 
 // Animation variants
 const fadeInUp = {
@@ -169,24 +176,6 @@ function Portfolio() {
       description:
         'Professional website for a comprehensive structure maintenance company showcasing services, expertise, and client testimonials.',
       tags: ['Web Design', 'Business', 'Maintenance Services'],
-      isExternal: true,
-    },
-    {
-      title: 'Clipstr',
-      image: clipstrLogo,
-      link: 'https://clipstr.fun/',
-      description:
-        'An engaging and fun platform designed for entertainment and user interaction with a modern, vibrant interface.',
-      tags: ['Web Design', 'Entertainment', 'Interactive'],
-      isExternal: true,
-    },
-    {
-      title: 'Angels Walking',
-      image: angelsWalkingLogo,
-      link: 'https://angels-walking.netlify.app/',
-      description:
-        'A life coach and spiritual recovery website designed to support individuals on their journey to healing and personal growth with a serene and supportive online presence.',
-      tags: ['Web Design', 'Life Coaching', 'Spiritual Recovery'],
       isExternal: true,
     },
   ];

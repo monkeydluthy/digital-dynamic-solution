@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { FaArrowRight } from 'react-icons/fa';
 import webDesignImg from '../assets/images/web-design.png';
 import marketingImg from '../assets/images/internet-marketing-1.png';
 import consultingImg from '../assets/images/consulting.png';

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g id="logo-design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Design canvas -->
+        <rect x="250" y="150" width="300" height="300" rx="15" fill="#2D3748"/>
+        <!-- Design elements -->
+        <circle cx="400" cy="300" r="80" fill="#4299E1" opacity="0.3"/>
+        <rect x="360" y="260" width="80" height="80" rx="10" fill="#48BB78" opacity="0.3"/>
+        <path d="M350,250 L450,350" stroke="#4A5568" stroke-width="4" stroke-linecap="round"/>
+        <path d="M450,250 L350,350" stroke="#4A5568" stroke-width="4" stroke-linecap="round"/>
+        <!-- Design tools -->
+        <circle cx="200" cy="200" r="30" fill="#2B6CB0"/>
+        <rect x="180" y="280" width="40" height="40" transform="rotate(45 200 300)" fill="#48BB78"/>
+        <path d="M550,200 L580,230" stroke="#A0AEC0" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="590" cy="240" r="15" fill="#4299E1"/>
+        <!-- Color palette -->
+        <circle cx="550" cy="350" r="15" fill="#FC8181"/>
+        <circle cx="550" cy="390" r="15" fill="#F6E05E"/>
+        <circle cx="550" cy="430" r="15" fill="#68D391"/>
+    </g>
+</svg> 

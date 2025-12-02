@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g id="social-media" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle cx="400" cy="300" r="200" fill="#4299E1" opacity="0.1"/>
+        <circle cx="300" cy="250" r="60" fill="#4299E1"/>
+        <circle cx="500" cy="250" r="60" fill="#48BB78"/>
+        <circle cx="400" cy="400" r="60" fill="#F56565"/>
+        <path d="M300,310 L500,310" stroke="#4A5568" stroke-width="4" stroke-linecap="round"/>
+        <path d="M300,310 L400,460" stroke="#4A5568" stroke-width="4" stroke-linecap="round"/>
+        <path d="M500,310 L400,460" stroke="#4A5568" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="300" cy="250" r="20" fill="#2B6CB0"/>
+        <circle cx="500" cy="250" r="20" fill="#2F855A"/>
+        <circle cx="400" cy="400" r="20" fill="#C53030"/>
+    </g>
+</svg> 

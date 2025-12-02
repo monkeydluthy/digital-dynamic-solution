@@ -137,7 +137,7 @@ function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>Tampa, FL</li>
               <li>luthdigitalconsult@gmail.com</li>
-              <li>(813) 833-2988</li>
+              <li>813-997-0321</li>
             </ul>
           </div>
         </div>

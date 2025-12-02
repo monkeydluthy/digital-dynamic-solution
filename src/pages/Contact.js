@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import contactHero from '../assets/images/hero/contact-hero.jpg';
+import companyLogo from '../assets/images/logo-black.png';
 
 // Animation variants
 const fadeInUp = {
@@ -233,14 +234,14 @@ function Contact() {
               <ContactInfo
                 icon="📧"
                 title="Email"
-                content="info@digitaldynamicsolution.com"
-                link="mailto:info@digitaldynamicsolution.com"
+                content="luthdigitalconsult@gmail.com"
+                link="mailto:luthdigitalconsult@gmail.com"
               />
               <ContactInfo
                 icon="📱"
                 title="Phone"
-                content="+1 (813) 555-0123"
-                link="tel:+18135550123"
+                content="813-997-0321"
+                link="tel:+18139970321"
               />
               <ContactInfo
                 icon="📍"
