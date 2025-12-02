@@ -3,19 +3,12 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import webDevelopment from '../assets/images/illustrations/web-development.svg';
 import contentCreation from '../assets/images/illustrations/content-creation.svg';
-import socialEngagement from '../assets/images/social-engagement.svg';
-import performanceGrowth from '../assets/images/performance-growth.svg';
 import strategyPlanning from '../assets/images/strategy-planning.svg';
 
 // Animation variants
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
-
-const fadeIn = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { duration: 0.6 } },
 };
 
 const staggerContainer = {

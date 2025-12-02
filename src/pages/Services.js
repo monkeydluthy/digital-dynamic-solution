@@ -12,7 +12,6 @@ import logoDesignImg from '../assets/images/logo-design.png';
 import websiteMaintenanceImg from '../assets/images/website-maintenace.png';
 import smMaintenanceImg from '../assets/images/sm-maintenance.png';
 import contentCreationImg from '../assets/images/content-creation.png';
-import digitalMarketing from '../assets/images/illustrations/digital-marketing.svg';
 import floaterImg from '../assets/images/floater-img.webp';
 
 // Animation variants
