@@ -10,7 +10,7 @@ import lyfestyleLogo from '../assets/images/lyfestyle-logo.png';
 import anjLogo from '../assets/images/anj-logo.png';
 import prophitLineLogo from '../assets/images/prophit-line.JPG';
 import allStructureLogo from '../assets/images/all-structure.png';
-import mnaStumpLogo from '../assets/images/mna-stump.png';
+import mnaStumpLogo from '../assets/images/mna-stump.jpg';
 import portfolioHero from '../assets/images/hero/portfolio-hero.jpg';
 
 // Animation variants
