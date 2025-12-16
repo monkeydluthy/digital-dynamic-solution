@@ -10,6 +10,7 @@ import lyfestyleLogo from '../assets/images/lyfestyle-logo.png';
 import anjLogo from '../assets/images/anj-logo.png';
 import prophitLineLogo from '../assets/images/prophit-line.JPG';
 import allStructureLogo from '../assets/images/all-structure.png';
+import mnaStumpLogo from '../assets/images/mna-stump.png';
 import portfolioHero from '../assets/images/hero/portfolio-hero.jpg';
 
 // Animation variants
@@ -167,6 +168,15 @@ function Portfolio() {
       description:
         'Professional website for a comprehensive structure maintenance company showcasing services, expertise, and client testimonials.',
       tags: ['Web Design', 'Business', 'Maintenance Services'],
+      isExternal: true,
+    },
+    {
+      title: 'M&A Stump Grinding',
+      image: mnaStumpLogo,
+      link: 'https://mnastumpgrinding.com/',
+      description:
+        'Professional website for a stump grinding service company featuring service information, contact details, and service area coverage.',
+      tags: ['Web Design', 'Business', 'Service Industry'],
       isExternal: true,
     },
   ];
