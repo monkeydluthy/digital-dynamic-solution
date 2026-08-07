@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import aboutHero from '../assets/images/hero/about-hero.jpg';
+import anthonyPhoto from '../assets/images/brand/anthony-headshot.jpg';
 
-// Animation variants
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -17,269 +16,218 @@ const staggerContainer = {
   },
 };
 
-const logoAnimation = {
-  initial: { opacity: 0, scale: 0.8 },
-  animate: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.8, ease: 'easeOut' },
-  },
-  hover: {
-    scale: 1.05,
-    transition: { duration: 0.3 },
-  },
-};
-
-const cardAnimation = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  hover: { y: -5, transition: { duration: 0.2 } },
-};
-
 function About() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <div className="bg-ink py-12 md:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNMjggNjZMMCA1MEwyOCAzNGwyOCAxNkwyOCA2NnpNMjggMzRMMCA1MEwyOCA2NmwyOC0xNkwyOCAzNHoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjU2IiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
+      {/* Hero */}
+      <div className="bg-ink py-16 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-ink via-primary-900 to-primary-800 opacity-90"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-500/20 via-transparent to-transparent"></div>
         <div className="container mx-auto px-4 relative">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-            <motion.div
-              className="w-full lg:w-1/2 text-center lg:text-left"
-              initial="initial"
-              animate="animate"
-              variants={staggerContainer}
-            >
-              <motion.h1
-                className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 text-white"
-                variants={fadeInUp}
-              >
-                About Us
-              </motion.h1>
-              <motion.p
-                className="text-lg sm:text-xl text-white max-w-2xl mx-auto lg:mx-0"
-                variants={fadeInUp}
-              >
-                Digital Dynamic Solution is a full-service digital agency
-                helping businesses thrive in the digital world.
-              </motion.p>
-            </motion.div>
-            <motion.div
-              className="w-full lg:w-1/2 flex justify-center"
-              initial="initial"
-              animate="animate"
-              whileHover="hover"
-              variants={logoAnimation}
-            >
-              <div className="relative group w-full max-w-md overflow-hidden rounded-2xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500 via-accent-500 to-secondary-500 opacity-20"></div>
-                <img
-                  src={aboutHero}
-                  alt="Our Team at Work"
-                  className="w-full h-auto relative z-10 transform transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="container mx-auto px-4 py-12 md:py-16 bg-gradient-to-b from-white to-primary-50">
-        {/* Combined Story & Mission Section */}
-        <motion.div
-          className="bg-white rounded-xl shadow-lg p-6 md:p-8 border border-primary-100 mb-8 md:mb-16 hover:shadow-2xl transition-shadow duration-300"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl font-bold text-primary-900 mb-6 text-center">
-            Our Story & Mission
-          </h2>
-          <div className="max-w-3xl mx-auto space-y-6">
-            <p className="text-lg text-primary-700 leading-relaxed">
-              Founded in Tampa, Florida, Digital Dynamic Solution has been
-              helping businesses transform their digital presence since 2020. We
-              combine creativity, technical expertise, and strategic thinking to
-              deliver exceptional results for our clients.
-            </p>
-            <p className="text-lg text-primary-700 leading-relaxed">
-              Our journey began with a simple vision: to help businesses thrive
-              in the digital age by providing innovative, tailored solutions
-              that drive real results. Today, we're proud to have helped
-              numerous businesses across various industries establish strong
-              online presences and achieve their digital goals.
-            </p>
-            <div className="border-t border-primary-100 pt-6 mt-8">
-              <p className="text-lg text-primary-700 leading-relaxed font-semibold mb-4">
-                Our mission is to empower businesses with innovative digital
-                solutions that drive growth and success in the modern digital
-                landscape.
-              </p>
-              <p className="text-lg text-primary-700 leading-relaxed">
-                We strive to be more than just a service provider – we aim to be
-                a trusted partner in your digital journey, helping you navigate
-                the ever-evolving digital landscape with confidence and achieve
-                sustainable, long-term success.
-              </p>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Two Box Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Values Box */}
           <motion.div
-            className="bg-white rounded-xl shadow-lg p-8 border border-primary-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-            variants={cardAnimation}
+            className="max-w-3xl mx-auto text-center"
             initial="initial"
-            whileInView="animate"
-            whileHover="hover"
-            viewport={{ once: true }}
+            animate="animate"
+            variants={staggerContainer}
           >
-            <h3 className="text-2xl font-bold text-primary-900 mb-4 text-center">
-              Our Values
-            </h3>
-            <motion.ul
-              className="space-y-4"
-              variants={staggerContainer}
-              initial="initial"
-              animate="animate"
+            <motion.h1
+              className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 text-white"
+              variants={fadeInUp}
             >
-              {[
-                {
-                  title: 'Innovation',
-                  description:
-                    'Constantly exploring new technologies and approaches to deliver cutting-edge solutions that keep you ahead of the competition.',
-                },
-                {
-                  title: 'Excellence',
-                  description:
-                    'Committed to delivering the highest quality in everything we do, from design and development to customer service.',
-                },
-                {
-                  title: 'Integrity',
-                  description:
-                    "Building trust through transparent communication, honest practices, and always putting our clients' interests first.",
-                },
-                {
-                  title: 'Client Success',
-                  description:
-                    'Measuring our success by the achievements and growth of our clients, ensuring your goals become our goals.',
-                },
-              ].map((value) => (
-                <motion.li
-                  key={value.title}
-                  className="flex items-start space-x-3 p-2 group"
-                  variants={fadeInUp}
-                  whileHover={{ x: 10 }}
-                >
-                  <span className="text-secondary-500 mt-1 transform group-hover:scale-125 transition-transform duration-300">
-                    ✓
-                  </span>
-                  <div>
-                    <span className="font-semibold block mb-1 text-primary-900 group-hover:text-primary-700 transition-colors duration-300">
-                      {value.title}
-                    </span>
-                    <span className="text-sm text-primary-700">
-                      {value.description}
-                    </span>
-                  </div>
-                </motion.li>
-              ))}
-            </motion.ul>
-          </motion.div>
-
-          {/* Why Choose Us Box */}
-          <motion.div
-            className="bg-white rounded-xl shadow-lg p-8 border border-primary-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-            variants={cardAnimation}
-            initial="initial"
-            whileInView="animate"
-            whileHover="hover"
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-bold text-primary-900 mb-4 text-center">
-              Why Choose Us
-            </h3>
-            <motion.ul
-              className="space-y-4"
-              variants={staggerContainer}
-              initial="initial"
-              animate="animate"
+              About
+            </motion.h1>
+            <motion.p
+              className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto"
+              variants={fadeInUp}
             >
-              {[
-                {
-                  title: 'Expert Team',
-                  description:
-                    'Our skilled professionals bring years of experience in web development, design, and digital marketing to every project.',
-                },
-                {
-                  title: 'Proven Results',
-                  description:
-                    'Track record of delivering successful projects that exceed client expectations and drive measurable business growth.',
-                },
-                {
-                  title: 'Custom Solutions',
-                  description:
-                    'Tailored approaches that address your unique business challenges and goals, never using one-size-fits-all solutions.',
-                },
-                {
-                  title: 'Dedicated Support',
-                  description:
-                    'Ongoing assistance and maintenance to ensure your digital presence continues to evolve and perform optimally.',
-                },
-              ].map((reason) => (
-                <motion.li
-                  key={reason.title}
-                  className="flex items-start space-x-3 p-2 group"
-                  variants={fadeInUp}
-                  whileHover={{ x: 10 }}
-                >
-                  <span className="text-accent-500 mt-1 transform group-hover:scale-125 transition-transform duration-300">
-                    ✓
-                  </span>
-                  <div>
-                    <span className="font-semibold block mb-1 text-primary-900 group-hover:text-primary-700 transition-colors duration-300">
-                      {reason.title}
-                    </span>
-                    <span className="text-sm text-primary-700">
-                      {reason.description}
-                    </span>
-                  </div>
-                </motion.li>
-              ))}
-            </motion.ul>
+              Digital Dynamic Solution helps local businesses and home-service
+              contractors get found, followed, and booked.
+            </motion.p>
           </motion.div>
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="bg-ink py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNMjggNjZMMCA1MEwyOCAzNGwyOCAxNkwyOCA2NnpNMjggMzRMMCA1MEwyOCA2NmwyOC0xNkwyOCAzNHoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjU2IiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
-        <div className="container mx-auto px-4 text-center relative">
+      {/* Founder */}
+      <div className="bg-gradient-to-b from-white to-mint py-16 md:py-20">
+        <div className="container mx-auto px-4">
           <motion.div
+            className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-14"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Digital Presence?
+            <div className="shrink-0">
+              <img
+                src={anthonyPhoto}
+                alt="Anthony Luth, founder of Digital Dynamic Solution"
+                className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover object-top shadow-xl ring-4 ring-primary-500/20"
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <p className="text-primary-500 font-semibold tracking-wide uppercase text-sm mb-2">
+                Founder
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-ink mb-4">
+                Anthony Luth
+              </h2>
+              <p className="text-lg text-body leading-relaxed">
+                Anthony founded Digital Dynamic Solution in Tampa, Florida in
+                2023 to help local businesses grow online with clear strategy,
+                consistent execution, and results you can measure — social,
+                websites, SEO, and custom tools that turn attention into booked
+                work.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Story & mission */}
+      <div className="bg-white py-16 border-t border-primary-100">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-ink mb-6 text-center">
+              Our Story &amp; Mission
             </h2>
-            <p className="text-xl text-white mb-8">
-              Let's work together to create innovative solutions that drive your
-              business forward.
-            </p>
+            <div className="space-y-5 text-lg text-body leading-relaxed">
+              <p>
+                Since 2023, Digital Dynamic Solution has helped businesses
+                transform their digital presence. We combine creativity,
+                technical expertise, and practical strategy to deliver results
+                that matter — more visibility, more followers, more booked jobs.
+              </p>
+              <p>
+                Our mission is simple: empower local businesses with digital
+                solutions that drive growth month-to-month, with everything
+                tracked so you know what&apos;s working.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Values + why */}
+      <div className="bg-mint/40 py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-card rounded-xl p-8 border border-primary-100">
+              <h3 className="text-2xl font-bold text-ink mb-6 text-center">
+                Our Values
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  {
+                    title: 'Clarity',
+                    description:
+                      'Straight talk and clear plans — no jargon for jargon\'s sake.',
+                  },
+                  {
+                    title: 'Results',
+                    description:
+                      'We measure what matters: leads, reviews, followers, and booked work.',
+                  },
+                  {
+                    title: 'Consistency',
+                    description:
+                      'Month-to-month execution that compounds, not one-off campaigns.',
+                  },
+                  {
+                    title: 'Partnership',
+                    description:
+                      'Your goals become our goals — we’re in it with you.',
+                  },
+                ].map((value) => (
+                  <li key={value.title} className="flex items-start gap-3">
+                    <span className="text-primary-500 font-bold mt-0.5">✓</span>
+                    <div>
+                      <span className="font-semibold text-ink block mb-1">
+                        {value.title}
+                      </span>
+                      <span className="text-sm text-body">
+                        {value.description}
+                      </span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-card rounded-xl p-8 border border-primary-100">
+              <h3 className="text-2xl font-bold text-ink mb-6 text-center">
+                Why Work With Us
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  {
+                    title: 'Built for local businesses',
+                    description:
+                      'Especially contractors and home-service companies that need calls and bookings.',
+                  },
+                  {
+                    title: 'Proven client wins',
+                    description:
+                      'From 0→2,100 followers to 39 Google reviews in 5 months — real outcomes.',
+                  },
+                  {
+                    title: 'Three clear core lines',
+                    description:
+                      'Social, Web Design & SEO, and Custom Apps — with support services as needed.',
+                  },
+                  {
+                    title: 'Direct access',
+                    description:
+                      'Work with Anthony — call or text 813.997.0321 anytime you’re ready.',
+                  },
+                ].map((reason) => (
+                  <li key={reason.title} className="flex items-start gap-3">
+                    <span className="text-primary-500 font-bold mt-0.5">✓</span>
+                    <div>
+                      <span className="font-semibold text-ink block mb-1">
+                        {reason.title}
+                      </span>
+                      <span className="text-sm text-body">
+                        {reason.description}
+                      </span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="bg-ink py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-600/30 via-transparent to-primary-500/20"></div>
+        <div className="container mx-auto px-4 text-center relative">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to get booked?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            Let&apos;s map out the next step for your business.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <a
+              href="tel:+18139970321"
+              className="btn-teal text-lg !px-10 !py-4"
+            >
+              Call or text 813.997.0321
+            </a>
             <Link
               to="/contact"
-              className="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg hover:bg-primary-50 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold transform hover:scale-105"
+              className="btn-teal-outline text-lg !px-10 !py-4"
             >
-              Get Started Today
+              Send a Message
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
