@@ -2,18 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
-// Import portfolio images
-import nrlLogo from '../assets/images/nrl-logo.PNG';
 import tampaNaLogo from '../assets/images/tampa-na-logo.png';
-import logoBlack from '../assets/images/logo-black.png';
 import lyfestyleLogo from '../assets/images/lyfestyle-logo.png';
 import anjLogo from '../assets/images/anj-logo.png';
 import prophitLineLogo from '../assets/images/prophit-line.JPG';
 import allStructureLogo from '../assets/images/all-structure.png';
 import mnaStumpLogo from '../assets/images/mna-stump.jpg';
-import portfolioHero from '../assets/images/hero/portfolio-hero.jpg';
+import nexusLogo from '../assets/images/brand/dynamic-nexus-on-black.png';
 
-// Animation variants
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -32,74 +28,71 @@ const cardAnimation = {
   animate: { opacity: 1, y: 0 },
 };
 
-const logoAnimation = {
-  initial: { opacity: 0, scale: 0.8 },
-  animate: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.8, ease: 'easeOut' },
-  },
-  hover: {
-    scale: 1.05,
-    transition: { duration: 0.3 },
-  },
-};
-
 function PortfolioCard({
   title,
   image,
+  emoji,
   link,
   description,
   tags,
-  isExternal = true,
-  index,
+  comingSoon = false,
 }) {
   return (
     <motion.div
       variants={cardAnimation}
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
-      className="h-full bg-white rounded-xl shadow-lg overflow-hidden border border-primary-100 hover:shadow-2xl transition-all duration-300"
+      className="h-full bg-card rounded-xl shadow-lg overflow-hidden border border-primary-100 hover:shadow-2xl transition-all duration-300 flex flex-col"
     >
-      <div className="relative">
-        <div className="relative h-48">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-400 opacity-10"></div>
-          <div className="bg-black h-full">
-            <img
-              src={image}
-              alt={title}
-              className="w-full h-full object-contain p-4"
-            />
+      <div className="relative h-48 bg-ink">
+        {emoji ? (
+          <div className="w-full h-full flex items-center justify-center text-7xl">
+            <span role="img" aria-label={title}>
+              {emoji}
+            </span>
           </div>
-          {/* Hover overlay with description */}
-          <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-90 opacity-0 hover:opacity-100 transition-all duration-300 flex items-center justify-center p-4">
-            <p className="text-white text-center">{description}</p>
-          </div>
-        </div>
-      </div>
-      <div className="p-6 flex flex-col">
-        <h3 className="text-xl font-bold text-primary-900 mb-4">{title}</h3>
-        <div className="flex flex-wrap gap-2 mb-4">
-          {tags.map((tag, index) => (
-            <motion.span
-              key={index}
-              className="px-3 py-1 bg-primary-600 text-white rounded-full text-sm font-medium transform hover:scale-105 transition-transform duration-300"
-              whileHover={{ scale: 1.05 }}
-            >
-              {tag}
-            </motion.span>
-          ))}
-        </div>
-        {link && (
-          <motion.a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-auto bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-all duration-300 text-center font-semibold transform hover:scale-105 flex items-center justify-center gap-2"
-            whileHover={{ scale: 1.05 }}
-          >
-            Visit Site <FaExternalLinkAlt className="text-sm" />
-          </motion.a>
+        ) : (
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-contain p-4"
+          />
         )}
+        {description && (
+          <div className="absolute top-0 left-0 w-full h-full bg-ink/90 opacity-0 hover:opacity-100 transition-all duration-300 flex items-center justify-center p-4">
+            <p className="text-white text-center text-sm">{description}</p>
+          </div>
+        )}
+      </div>
+      <div className="p-6 flex flex-col flex-grow">
+        <h3 className="text-xl font-bold text-ink mb-4">{title}</h3>
+        {tags?.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1 bg-mint text-primary-600 rounded-full text-sm font-medium"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+        <div className="mt-auto">
+          {link ? (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-teal w-full text-center flex items-center justify-center gap-2"
+            >
+              Visit Site <FaExternalLinkAlt className="text-sm" />
+            </a>
+          ) : (
+            <span className="inline-block w-full text-center px-6 py-3 rounded-lg bg-mint text-primary-600 font-semibold">
+              {comingSoon ? 'Coming soon' : 'Details soon'}
+            </span>
+          )}
+        </div>
       </div>
     </motion.div>
   );
@@ -108,58 +101,12 @@ function PortfolioCard({
 function Portfolio() {
   const portfolioItems = [
     {
-      title: 'Digital Resume',
-      image: logoBlack,
-      link: 'https://anthonyluth.com',
+      title: 'M&A Stump Grinding',
+      image: mnaStumpLogo,
+      link: 'https://mnastumpgrinding.com/',
       description:
-        'A modern, interactive digital resume showcasing professional experience and skills.',
-      tags: ['React', 'Tailwind CSS', 'Responsive Design'],
-      isExternal: true,
-    },
-    {
-      title: 'ProphitLine',
-      image: prophitLineLogo,
-      link: 'https://prophit-line.netlify.app/',
-      description:
-        'A comprehensive prediction market aggregator platform that combines data from Polymarket, Kalshi, Manifold, and PredictIt. Features real-time market tracking, portfolio management, and total volume analytics across multiple prediction platforms.',
-      tags: ['Prediction Markets', 'Data Aggregation', 'React'],
-      isExternal: true,
-    },
-    {
-      title: 'Lyfestyle Tattoos',
-      image: lyfestyleLogo,
-      link: 'https://lyfestyletattoos.com',
-      description:
-        'Custom website for a professional tattoo studio featuring artist portfolios and booking system.',
-      tags: ['Web Design', 'E-commerce', 'Portfolio'],
-      isExternal: true,
-    },
-    {
-      title: 'NRL Hair',
-      image: nrlLogo,
-      link: 'https://nrlhair.com',
-      description:
-        'Elegant website for a high-end hair salon with online booking capabilities.',
-      tags: ['Branding', 'Web Design', 'Booking System'],
-      isExternal: true,
-    },
-    {
-      title: 'ANJ Sports Cards',
-      image: anjLogo,
-      link: 'https://anjsportscards.com',
-      description:
-        'Modern e-commerce platform for sports card collectors featuring a sleek design and seamless shopping experience.',
-      tags: ['E-commerce', 'React', 'Netlify'],
-      isExternal: true,
-    },
-    {
-      title: 'Tampa NA',
-      image: tampaNaLogo,
-      link: 'https://tampa-na.org',
-      description:
-        'Community website with event management and resource directory.',
-      tags: ['Web Design', 'Community', 'Events'],
-      isExternal: true,
+        'Professional website for a stump grinding service company featuring service information, contact details, and service area coverage.',
+      tags: ['Web Design', 'Business', 'Service Industry'],
     },
     {
       title: 'All Structure Maintenance',
@@ -168,80 +115,117 @@ function Portfolio() {
       description:
         'Professional website for a comprehensive structure maintenance company showcasing services, expertise, and client testimonials.',
       tags: ['Web Design', 'Business', 'Maintenance Services'],
-      isExternal: true,
     },
     {
-      title: 'M&A Stump Grinding',
-      image: mnaStumpLogo,
-      link: 'https://mnastumpgrinding.com/',
+      title: 'Lyfestyle Tattoos',
+      image: lyfestyleLogo,
+      link: 'https://lyfestyletattoos.com',
       description:
-        'Professional website for a stump grinding service company featuring service information, contact details, and service area coverage.',
-      tags: ['Web Design', 'Business', 'Service Industry'],
-      isExternal: true,
+        'Custom website for a professional tattoo studio featuring artist portfolios and booking system.',
+      tags: ['Web Design', 'E-commerce', 'Portfolio'],
+    },
+    {
+      title: 'Dynamic Nexus',
+      image: nexusLogo,
+      description: 'Custom app project — details coming soon.',
+      tags: ['Custom App', 'Product'],
+      comingSoon: true,
+    },
+    {
+      title: 'NightSync',
+      emoji: '🌙',
+      description: 'Custom app project — details coming soon.',
+      tags: ['Custom App', 'Product'],
+      comingSoon: true,
+    },
+    {
+      title: 'Tampa NA',
+      image: tampaNaLogo,
+      link: 'https://tampa-na.org',
+      description:
+        'Community website with event management and resource directory.',
+      tags: ['Web Design', 'Community', 'Events'],
+    },
+    {
+      title: 'ProphitLine',
+      image: prophitLineLogo,
+      link: 'https://prophit-line.netlify.app/',
+      description:
+        'A comprehensive prediction market aggregator platform combining data from multiple prediction platforms.',
+      tags: ['Prediction Markets', 'Data Aggregation', 'React'],
+    },
+    {
+      title: 'ANJ Sports Cards',
+      image: anjLogo,
+      link: 'https://anjsportscards.com',
+      description:
+        'Modern e-commerce platform for sports card collectors featuring a sleek design and seamless shopping experience.',
+      tags: ['E-commerce', 'React', 'Netlify'],
     },
   ];
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <div className="bg-ink py-12 md:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNMjggNjZMMCA1MEwyOCAzNGwyOCAxNkwyOCA2NnpNMjggMzRMMCA1MEwyOCA2NmwyOC0xNkwyOCAzNHoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjU2IiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
+      {/* Hero — matches other pages */}
+      <div className="bg-ink py-16 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-ink via-primary-900 to-primary-800 opacity-90"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-500/20 via-transparent to-transparent"></div>
         <div className="container mx-auto px-4 relative">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-            <motion.div
-              className="w-full lg:w-1/2 text-center lg:text-left"
-              initial="initial"
-              animate="animate"
-              variants={staggerContainer}
+          <motion.div
+            className="max-w-3xl mx-auto text-center"
+            initial="initial"
+            animate="animate"
+            variants={staggerContainer}
+          >
+            <motion.h1
+              className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 text-white"
+              variants={fadeInUp}
             >
-              <motion.h1
-                className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 text-white"
-                variants={fadeInUp}
-              >
-                Our Portfolio
-              </motion.h1>
-              <motion.p
-                className="text-lg sm:text-xl text-white max-w-2xl mx-auto lg:mx-0"
-                variants={fadeInUp}
-              >
-                Explore our latest projects and see how we've helped businesses
-                achieve their digital goals.
-              </motion.p>
-            </motion.div>
-            <motion.div
-              className="w-full lg:w-1/2 flex justify-center"
-              initial="initial"
-              animate="animate"
-              whileHover="hover"
-              variants={logoAnimation}
+              Portfolio
+            </motion.h1>
+            <motion.p
+              className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto"
+              variants={fadeInUp}
             >
-              <div className="relative group w-full max-w-md overflow-hidden rounded-2xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500 via-accent-500 to-secondary-500 opacity-20"></div>
-                <img
-                  src={portfolioHero}
-                  alt="Creative Workspace"
-                  className="w-full h-auto relative z-10 transform transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-            </motion.div>
-          </div>
+              Real work for local businesses, contractors, and custom products
+              — websites, social, and apps that get results.
+            </motion.p>
+          </motion.div>
         </div>
       </div>
 
-      {/* Portfolio Grid */}
-      <div className="container mx-auto px-4 py-12 md:py-16 bg-gradient-to-b from-white to-primary-50">
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
-          initial="initial"
-          animate="animate"
-          variants={staggerContainer}
-        >
-          {portfolioItems.map((item, index) => (
-            <motion.div key={index} variants={fadeInUp}>
-              <PortfolioCard {...item} index={index} />
-            </motion.div>
-          ))}
-        </motion.div>
+      {/* Grid */}
+      <div className="bg-gradient-to-b from-white to-mint py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+            initial="initial"
+            animate="animate"
+            variants={staggerContainer}
+          >
+            {portfolioItems.map((item) => (
+              <motion.div key={item.title} variants={fadeInUp}>
+                <PortfolioCard {...item} />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="bg-ink py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-600/30 via-transparent to-primary-500/20"></div>
+        <div className="container mx-auto px-4 text-center relative">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Want results like these?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            Call or text — let&apos;s talk about your next project.
+          </p>
+          <a href="tel:+18139970321" className="btn-teal text-lg !px-10 !py-4">
+            Call or text 813.997.0321
+          </a>
+        </div>
       </div>
     </div>
   );
