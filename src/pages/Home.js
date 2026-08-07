@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import webDesignImg from '../assets/images/web-design.png';
-import socialMediaImg from '../assets/images/social-media.png';
-import consultingImg from '../assets/images/consulting.png';
 import companyLogo from '../assets/images/brand/dds-monogram-color-on-white.jpg';
 
 const proofStats = [
@@ -16,21 +13,21 @@ const coreServices = [
     title: 'Social Media Management',
     description:
       'Stay consistent, grow your following, and turn attention into booked jobs for your local business.',
-    image: socialMediaImg,
+    icon: 'fa-share-nodes',
     link: '/social-media',
   },
   {
     title: 'Web Design & SEO',
     description:
       'A site that looks sharp, ranks locally, and turns searchers into calls — built for contractors and service businesses.',
-    image: webDesignImg,
+    icon: 'fa-laptop-code',
     link: '/web-design',
   },
   {
     title: 'Custom App Development',
     description:
       'Purpose-built tools and apps that streamline how you run and grow — from lead capture to day-to-day operations.',
-    image: consultingImg,
+    icon: 'fa-mobile-screen-button',
     link: '/consulting',
   },
 ];
@@ -122,13 +119,13 @@ function Home() {
                 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-primary-100 text-center group animate-fade-in-up"
                 style={{ animationDelay: `${0.3 + index * 0.1}s` }}
               >
-                <div className="relative mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <div className="absolute inset-0 bg-primary-400 rounded-full opacity-20 group-hover:opacity-30 blur-lg"></div>
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="mx-auto h-32 w-auto object-contain relative z-10"
-                  />
+                <div className="mb-6 flex justify-center">
+                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary-50 text-primary-500 group-hover:bg-primary-500 group-hover:text-white transition-all duration-300">
+                    <i
+                      className={`fa-solid ${service.icon} text-3xl`}
+                      aria-hidden="true"
+                    ></i>
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-primary-900">
                   {service.title}
