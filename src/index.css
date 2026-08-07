@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    @apply text-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-ink font-semibold;
+  }
+}
+
 @layer components {
   /* One teal button style sitewide */
   .btn-teal {

@@ -47,8 +47,10 @@ function App() {
 
           {/* Service Routes */}
           <Route path="/web-design" element={<WebDesign />} />
+          <Route path="/web-design-seo" element={<WebDesign />} />
           <Route path="/internet-marketing" element={<InternetMarketing />} />
           <Route path="/consulting" element={<Consulting />} />
+          <Route path="/app-development" element={<Consulting />} />
           <Route path="/social-media" element={<SocialMedia />} />
           <Route path="/seo" element={<SEO />} />
           <Route path="/logo-design" element={<LogoDesign />} />

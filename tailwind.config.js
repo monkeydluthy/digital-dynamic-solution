@@ -3,6 +3,9 @@ module.exports = {
   content: ['./src/**/*.{js,jsx}', './public/index.html'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+      },
       colors: {
         // Brand: black + green-teal + white
         // secondary/accent remapped to teal so legacy rainbow classes resolve to brand
