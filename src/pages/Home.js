@@ -3,14 +3,21 @@ import { Link } from 'react-router-dom';
 import webDesignImg from '../assets/images/web-design.png';
 import marketingImg from '../assets/images/internet-marketing-1.png';
 import consultingImg from '../assets/images/consulting.png';
-import companyLogo from '../assets/images/logo-black.png';
+import companyLogo from '../assets/images/brand/dds-monogram-color-on-white.jpg';
+
+const proofStats = [
+  { value: '100+', label: 'customers' },
+  { value: '39', label: 'Google reviews in 5 months' },
+  { value: '2,100', label: 'followers from zero' },
+];
 
 function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-primary-600 via-accent-500 to-secondary-500 py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNMjggNjZMMCA1MEwyOCAzNGwyOCAxNkwyOCA2NnpNMjggMzRMMCA1MEwyOCA2NmwyOC0xNkwyOCAzNHoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjU2IiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
+      <div className="bg-ink py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-ink via-primary-900 to-primary-800 opacity-90"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-500/20 via-transparent to-transparent"></div>
         <div className="container mx-auto px-4 relative">
           <div className="flex flex-col-reverse lg:flex-row items-center justify-between">
             <div className="lg:w-1/2 mb-10 lg:mb-0 text-center">
@@ -18,7 +25,7 @@ function Home() {
                 Transform Your Digital Presence
               </h1>
               <p
-                className="text-xl text-white mb-8 mx-auto max-w-2xl animate-fade-in-up"
+                className="text-xl text-white/90 mb-8 mx-auto max-w-2xl animate-fade-in-up"
                 style={{ animationDelay: '0.2s' }}
               >
                 Professional Web Design, Development, and Digital Marketing
@@ -29,24 +36,16 @@ function Home() {
                 className="flex flex-wrap gap-4 justify-center animate-fade-in-up"
                 style={{ animationDelay: '0.4s' }}
               >
-                <Link
-                  to="/portfolio"
-                  className="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg hover:bg-primary-50 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold transform hover:scale-105"
-                >
+                <Link to="/portfolio" className="btn-teal-light">
                   View Portfolio
                 </Link>
-                <Link
-                  to="/contact"
-                  className="inline-block bg-secondary-600 text-white px-8 py-3 rounded-lg hover:bg-secondary-700 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold transform hover:scale-105 border-2 border-white/20"
-                >
+                <Link to="/contact" className="btn-teal">
                   Get Started
                 </Link>
               </div>
             </div>
             <div className="lg:w-1/2 lg:pl-10 flex justify-center mb-10 lg:mb-0">
-              <div className="relative group w-full max-w-md bg-white bg-opacity-95 rounded-2xl p-8">
-                <div className="absolute inset-0 bg-white rounded-2xl opacity-90"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500 via-accent-500 to-secondary-500 rounded-2xl opacity-10 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="relative group w-full max-w-md bg-white rounded-2xl p-8 shadow-2xl">
                 <img
                   src={companyLogo}
                   alt="Digital Dynamic Solution"
@@ -54,6 +53,24 @@ function Home() {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Proof / Social stats strip */}
+      <div className="bg-primary-500 text-white py-8">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 text-center">
+            {proofStats.map((stat) => (
+              <div key={stat.label} className="px-2">
+                <p className="text-3xl md:text-4xl font-bold tracking-tight">
+                  {stat.value}
+                </p>
+                <p className="text-white/90 text-sm md:text-base mt-1 capitalize">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -76,7 +93,7 @@ function Home() {
               style={{ animationDelay: '0.3s' }}
             >
               <div className="relative mb-6 group-hover:scale-110 transition-transform duration-300">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-accent-400 rounded-full opacity-20 group-hover:opacity-30 blur-lg"></div>
+                <div className="absolute inset-0 bg-primary-400 rounded-full opacity-20 group-hover:opacity-30 blur-lg"></div>
                 <img
                   src={webDesignImg}
                   alt="Website Design"
@@ -90,10 +107,7 @@ function Home() {
                 Our website design process focuses on developing a website that
                 builds your brand and audience.
               </p>
-              <Link
-                to="/web-design"
-                className="inline-block bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-all duration-300 shadow-md hover:shadow-lg w-full text-center transform hover:scale-105"
-              >
+              <Link to="/web-design" className="btn-teal w-full text-center">
                 Learn More
               </Link>
             </div>
@@ -103,7 +117,7 @@ function Home() {
               style={{ animationDelay: '0.4s' }}
             >
               <div className="relative mb-6 group-hover:scale-110 transition-transform duration-300">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent-400 to-secondary-400 rounded-full opacity-20 group-hover:opacity-30 blur-lg"></div>
+                <div className="absolute inset-0 bg-primary-400 rounded-full opacity-20 group-hover:opacity-30 blur-lg"></div>
                 <img
                   src={marketingImg}
                   alt="Internet Marketing"
@@ -119,7 +133,7 @@ function Home() {
               </p>
               <Link
                 to="/internet-marketing"
-                className="inline-block bg-accent-500 text-white px-6 py-3 rounded-lg hover:bg-accent-600 transition-all duration-300 shadow-md hover:shadow-lg w-full text-center transform hover:scale-105"
+                className="btn-teal w-full text-center"
               >
                 Learn More
               </Link>
@@ -130,7 +144,7 @@ function Home() {
               style={{ animationDelay: '0.5s' }}
             >
               <div className="relative mb-6 group-hover:scale-110 transition-transform duration-300">
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary-400 to-primary-400 rounded-full opacity-20 group-hover:opacity-30 blur-lg"></div>
+                <div className="absolute inset-0 bg-primary-400 rounded-full opacity-20 group-hover:opacity-30 blur-lg"></div>
                 <img
                   src={consultingImg}
                   alt="Consulting Services"
@@ -144,10 +158,7 @@ function Home() {
                 Maximize your digital business strategy for revenue generation
                 and improved marketing tactics.
               </p>
-              <Link
-                to="/consulting"
-                className="inline-block bg-secondary-500 text-white px-6 py-3 rounded-lg hover:bg-secondary-600 transition-all duration-300 shadow-md hover:shadow-lg w-full text-center transform hover:scale-105"
-              >
+              <Link to="/consulting" className="btn-teal w-full text-center">
                 Learn More
               </Link>
             </div>
@@ -156,26 +167,36 @@ function Home() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-br from-accent-500 via-primary-600 to-secondary-500 py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNMjggNjZMMCA1MEwyOCAzNGwyOCAxNkwyOCA2NnpNMjggMzRMMCA1MEwyOCA2NmwyOC0xNkwyOCAzNHoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjU2IiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
+      <div className="bg-ink py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-600/30 via-transparent to-primary-500/20"></div>
         <div className="container mx-auto px-4 text-center relative">
           <h2 className="text-4xl font-bold text-white mb-6 animate-fade-in-up">
             Ready to Start Your Digital Journey?
           </h2>
           <p
-            className="text-xl text-white mb-8 max-w-2xl mx-auto animate-fade-in-up"
+            className="text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in-up"
             style={{ animationDelay: '0.2s' }}
           >
-            Let's work together to create a powerful online presence that drives
-            results.
+            Call or text{' '}
+            <a
+              href="tel:+18139970321"
+              className="text-primary-400 font-semibold hover:text-primary-300 underline underline-offset-4"
+            >
+              813.997.0321
+            </a>{' '}
+            — let&apos;s build a presence that gets you found, followed, and booked.
           </p>
-          <Link
-            to="/contact"
-            className="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg hover:bg-primary-50 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold transform hover:scale-105 animate-fade-in-up"
+          <div
+            className="flex flex-wrap gap-4 justify-center animate-fade-in-up"
             style={{ animationDelay: '0.4s' }}
           >
-            Get Started Today
-          </Link>
+            <a href="tel:+18139970321" className="btn-teal">
+              Call or text 813.997.0321
+            </a>
+            <Link to="/contact" className="btn-teal-outline">
+              Send a Message
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -29,7 +29,7 @@ import ContentCreation from './pages/ContentCreation';
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-primary-50 to-white">
+    <div className="flex flex-col min-h-screen bg-white">
       <ScrollToTop />
       <Header />
       <main className="flex-grow">
