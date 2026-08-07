@@ -2,19 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-// Import images
-import webDesignImg from '../assets/images/web-design.png';
-import marketingImg from '../assets/images/internet-marketing-1.png';
-import consultingImg from '../assets/images/consulting.png';
-import socialMediaImg from '../assets/images/social-media.png';
-import seoImg from '../assets/images/seo-1.png';
-import logoDesignImg from '../assets/images/logo-design.png';
-import websiteMaintenanceImg from '../assets/images/website-maintenace.png';
-import smMaintenanceImg from '../assets/images/sm-maintenance.png';
-import contentCreationImg from '../assets/images/content-creation.png';
-import floaterImg from '../assets/images/floater-img.webp';
-
-// Animation variants
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -28,182 +15,195 @@ const staggerContainer = {
   },
 };
 
-const cardAnimation = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  hover: { y: -5, transition: { duration: 0.2 } },
-};
+const coreServices = [
+  {
+    title: 'Social Media Management',
+    description:
+      'Stay consistent, grow your following, and turn attention into booked jobs for your local business.',
+    icon: 'fa-share-nodes',
+    link: '/social-media',
+    subItems: [
+      { title: 'Social Media Integration', link: '/social-media' },
+      { title: 'Social Media Maintenance', link: '/sm-maintenance' },
+      { title: 'Content Creation', link: '/content-creation' },
+    ],
+  },
+  {
+    title: 'Web Design & SEO',
+    description:
+      'A site that looks sharp, ranks locally, and turns searchers into calls — built for contractors and service businesses.',
+    icon: 'fa-laptop-code',
+    link: '/web-design-seo',
+    subItems: [
+      { title: 'Search Engine Optimization', link: '/seo' },
+      { title: 'Customized Logo Design', link: '/logo-design' },
+      { title: 'Website Maintenance', link: '/website-maintenance' },
+    ],
+  },
+  {
+    title: 'Custom App Development',
+    description:
+      'Purpose-built tools and apps that streamline how you run and grow — from lead capture to day-to-day operations.',
+    icon: 'fa-mobile-screen-button',
+    link: '/app-development',
+    subItems: [],
+  },
+];
 
-function ServiceCard({ image, title, description, link, index }) {
-  const gradients = [
-    'from-primary-400 to-accent-400',
-    'from-accent-400 to-secondary-400',
-    'from-secondary-400 to-primary-400',
-  ];
-  const gradient = gradients[index % 3];
-
+function CoreServiceCard({ title, description, icon, link }) {
   return (
     <motion.div
-      className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-2xl transition-all duration-300 border border-primary-100 h-[420px] flex flex-col transform hover:-translate-y-2"
-      variants={cardAnimation}
-      whileHover="hover"
+      className="bg-card rounded-xl shadow-lg p-8 text-center border border-primary-100 h-full flex flex-col hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group"
+      variants={fadeInUp}
     >
-      <motion.div
-        className="relative flex justify-center items-center h-32 mb-6 group"
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.3 }}
-      >
-        <div
-          className={`absolute inset-0 bg-gradient-to-br ${gradient} rounded-full opacity-20 group-hover:opacity-30 blur-lg`}
-        ></div>
-        <img
-          src={image}
-          alt={title}
-          className="h-full w-auto object-contain filter drop-shadow-md relative z-10"
-        />
-      </motion.div>
-      <h3 className="text-2xl font-bold mb-4 text-primary-900">{title}</h3>
-      <p className="text-primary-700 mb-6 flex-grow">{description}</p>
-      <motion.div
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="mt-auto"
-      >
-        <Link to={link} className="btn-teal w-full text-center">
-          Learn More
-        </Link>
-      </motion.div>
+      <div className="mb-6 flex justify-center">
+        <div className="flex h-20 w-20 items-center justify-center rounded-full bg-mint text-primary-500 group-hover:bg-primary-500 group-hover:text-white transition-all duration-300">
+          <i className={`fa-solid ${icon} text-3xl`} aria-hidden="true"></i>
+        </div>
+      </div>
+      <h3 className="text-2xl font-bold mb-4 text-ink">{title}</h3>
+      <p className="text-body mb-6 flex-grow">{description}</p>
+      <Link to={link} className="btn-teal w-full text-center mt-auto">
+        Learn More
+      </Link>
     </motion.div>
   );
 }
 
 function Services() {
-  const services = [
-    {
-      image: webDesignImg,
-      title: 'Website Design',
-      description:
-        'Custom website design focused on building your brand and growing your audience.',
-      link: '/web-design',
-    },
-    {
-      image: marketingImg,
-      title: 'Internet Marketing',
-      description:
-        'Strategic digital marketing plans that drive high-converting traffic to your website.',
-      link: '/internet-marketing',
-    },
-    {
-      image: consultingImg,
-      title: 'Consulting Services',
-      description:
-        'Expert guidance to optimize your digital strategy and create multiple revenue streams.',
-      link: '/consulting',
-    },
-    {
-      image: socialMediaImg,
-      title: 'Social Media Integration',
-      description:
-        'Elevate your social media presence with our expert integration services.',
-      link: '/social-media',
-    },
-    {
-      image: seoImg,
-      title: 'Search Engine Optimization',
-      description:
-        'Boost your search rankings, increase website traffic, and drive more revenue.',
-      link: '/seo',
-    },
-    {
-      image: logoDesignImg,
-      title: 'Customized Logo Design',
-      description:
-        'Create a unique and memorable brand identity with our professional logo design services.',
-      link: '/logo-design',
-    },
-    {
-      image: websiteMaintenanceImg,
-      title: 'Website Maintenance',
-      description:
-        'Keep your website secure, up-to-date, and performing at its peak.',
-      link: '/website-maintenance',
-    },
-    {
-      image: smMaintenanceImg,
-      title: 'Social Media Maintenance',
-      description:
-        'Engage your audience and achieve business goals with our social media management.',
-      link: '/sm-maintenance',
-    },
-    {
-      image: contentCreationImg,
-      title: 'Content Creation',
-      description:
-        'Connect with your audience through engaging content that establishes authority.',
-      link: '/content-creation',
-    },
-  ];
-
   return (
     <div className="min-h-screen">
-      <div className="bg-ink py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNMjggNjZMMCA1MEwyOCAzNGwyOCAxNkwyOCA2NnpNMjggMzRMMCA1MEwyOCA2NmwyOC0xNkwyOCAzNHoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjU2IiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
+      {/* Hero */}
+      <div className="bg-ink py-20 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-ink via-primary-900 to-primary-800 opacity-90"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-500/20 via-transparent to-transparent"></div>
         <div className="container mx-auto px-4 relative">
-          <div className="flex flex-col lg:flex-row items-center justify-between">
-            <motion.div
-              className="lg:w-1/2 text-center mb-8 lg:mb-0"
-              initial="initial"
-              animate="animate"
-              variants={staggerContainer}
+          <motion.div
+            className="max-w-3xl mx-auto text-center"
+            initial="initial"
+            animate="animate"
+            variants={staggerContainer}
+          >
+            <motion.h1
+              className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white"
+              variants={fadeInUp}
             >
-              <motion.h1
-                className="text-5xl md:text-6xl font-bold mb-6 text-white"
-                variants={fadeInUp}
-              >
-                Our Services
-              </motion.h1>
-              <motion.p
-                className="text-xl text-white max-w-2xl mx-auto"
-                variants={fadeInUp}
-              >
-                Freelance Web Design and Development based in Tampa, Florida |
-                Internet Marketing, and other Business Solutions
-              </motion.p>
-            </motion.div>
-            <motion.div
-              className="lg:w-1/2 hidden lg:flex justify-center"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              whileHover={{ scale: 1.05 }}
+              Our Services
+            </motion.h1>
+            <motion.p
+              className="text-lg md:text-xl text-white/90"
+              variants={fadeInUp}
             >
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-400 via-accent-400 to-secondary-400 rounded-xl opacity-75 blur-xl group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500 via-accent-500 to-secondary-500 rounded-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500 animate-pulse"></div>
-                <img
-                  src={floaterImg}
-                  alt="Digital Services"
-                  className="w-full max-w-lg rounded-lg object-cover relative z-10 filter contrast-125 brightness-110 saturate-150"
-                />
+              Three core lines for local businesses and home-service contractors
+              — plus supporting services that keep you found, followed, and
+              booked.
+            </motion.p>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Core lines */}
+      <div className="bg-gradient-to-b from-white to-mint py-16 md:py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-ink mb-3">
+              Core Lines
+            </h2>
+            <p className="text-body text-lg max-w-2xl mx-auto">
+              Start here — the three services that drive the most growth for our
+              clients.
+            </p>
+          </div>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            {coreServices.map((service) => (
+              <CoreServiceCard key={service.title} {...service} />
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Supporting services under each core */}
+      <div className="bg-white py-16 md:py-20 border-t border-primary-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-ink mb-3">
+              Also available
+            </h2>
+            <p className="text-body text-lg max-w-2xl mx-auto">
+              Supporting services that plug into each core line.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {coreServices.map((service) => (
+              <div
+                key={`sub-${service.title}`}
+                className="bg-card rounded-xl p-6 border border-primary-100"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-mint text-primary-500 shrink-0">
+                    <i
+                      className={`fa-solid ${service.icon} text-sm`}
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                  <h3 className="text-lg font-semibold text-ink leading-snug">
+                    {service.title}
+                  </h3>
+                </div>
+                {service.subItems.length > 0 ? (
+                  <ul className="space-y-3">
+                    {service.subItems.map((item) => (
+                      <li key={item.title}>
+                        <Link
+                          to={item.link}
+                          className="text-body hover:text-primary-500 transition-colors inline-flex items-center gap-2"
+                        >
+                          <span className="text-primary-500" aria-hidden="true">
+                            →
+                          </span>
+                          {item.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-muted text-sm">
+                    Custom builds scoped to your workflow —{' '}
+                    <Link
+                      to={service.link}
+                      className="text-primary-500 hover:text-primary-600 font-medium"
+                    >
+                      learn more
+                    </Link>
+                    .
+                  </p>
+                )}
               </div>
-            </motion.div>
+            ))}
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-20 bg-gradient-to-b from-white to-primary-50">
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          initial="initial"
-          animate="animate"
-          variants={staggerContainer}
-        >
-          {services.map((service, index) => (
-            <motion.div key={index} variants={fadeInUp}>
-              <ServiceCard {...service} index={index} />
-            </motion.div>
-          ))}
-        </motion.div>
+      {/* CTA */}
+      <div className="bg-ink py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-600/30 via-transparent to-primary-500/20"></div>
+        <div className="container mx-auto px-4 text-center relative">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Not sure where to start?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            Call or text — we&apos;ll match you to the right core line.
+          </p>
+          <a href="tel:+18139970321" className="btn-teal text-lg !px-10 !py-4">
+            Call or text 813.997.0321
+          </a>
+        </div>
       </div>
     </div>
   );
