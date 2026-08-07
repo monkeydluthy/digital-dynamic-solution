@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/images/brand/dds-monogram-color-on-black.png';
+import logo from '../assets/images/brand/dds-monogram-color-on-dark.png';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
