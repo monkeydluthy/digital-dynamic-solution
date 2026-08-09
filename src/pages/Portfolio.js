@@ -10,6 +10,7 @@ import prophitLineLogo from '../assets/images/prophit-line.JPG';
 import allStructureLogo from '../assets/images/all-structure.png';
 import mnaStumpLogo from '../assets/images/mna-stump.jpg';
 import nexusLogo from '../assets/images/brand/dynamic-nexus-on-black.png';
+import signatureTreeLogo from '../assets/images/signature-tree-logo.png';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -159,7 +160,7 @@ function Portfolio() {
     },
     {
       title: 'Signature Tree & Home',
-      emoji: '🌳',
+      image: signatureTreeLogo,
       caseStudyLink: '/case-studies/signature-tree',
       description:
         'Social media growth that drove new customers for a tree-care company.',
