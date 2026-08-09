@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
-import tampaNaLogo from '../assets/images/tampa-na-logo.png';
+import tampaNaLogo from '../assets/images/tampa-na-logo-card.png';
 import lyfestyleLogo from '../assets/images/lyfestyle-logo.png';
 import anjLogo from '../assets/images/anj-logo.png';
 import prophitLineLogo from '../assets/images/prophit-line.JPG';
@@ -33,9 +34,11 @@ function PortfolioCard({
   image,
   emoji,
   link,
+  caseStudyLink,
+  primaryCta,
   description,
   tags,
-  comingSoon = false,
+  result,
 }) {
   return (
     <motion.div
@@ -64,9 +67,9 @@ function PortfolioCard({
         )}
       </div>
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-ink mb-4">{title}</h3>
+        <h3 className="text-xl font-bold text-ink mb-3">{title}</h3>
         {tags?.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className="flex flex-wrap gap-2 mb-3">
             {tags.map((tag) => (
               <span
                 key={tag}
@@ -77,21 +80,45 @@ function PortfolioCard({
             ))}
           </div>
         )}
-        <div className="mt-auto">
-          {link ? (
+        {result && (
+          <p className="text-primary-600 font-semibold text-sm mb-4 leading-snug">
+            {result}
+          </p>
+        )}
+        <div className="mt-auto flex flex-col gap-2">
+          {caseStudyLink && (
+            <Link
+              to={caseStudyLink}
+              className="btn-teal w-full text-center !py-2.5"
+            >
+              View Case Study
+            </Link>
+          )}
+          {primaryCta ? (
+            <Link
+              to={primaryCta.to}
+              className={`${
+                caseStudyLink
+                  ? 'inline-block w-full text-center px-6 py-2.5 rounded-lg border-2 border-primary-500 text-primary-600 font-semibold hover:bg-mint transition-colors'
+                  : 'btn-teal w-full text-center'
+              }`}
+            >
+              {primaryCta.label}
+            </Link>
+          ) : link ? (
             <a
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-teal w-full text-center flex items-center justify-center gap-2"
+              className={`${
+                caseStudyLink
+                  ? 'inline-flex w-full items-center justify-center gap-2 px-6 py-2.5 rounded-lg border-2 border-primary-500 text-primary-600 font-semibold hover:bg-mint transition-colors'
+                  : 'btn-teal w-full text-center flex items-center justify-center gap-2'
+              }`}
             >
               Visit Site <FaExternalLinkAlt className="text-sm" />
             </a>
-          ) : (
-            <span className="inline-block w-full text-center px-6 py-3 rounded-lg bg-mint text-primary-600 font-semibold">
-              {comingSoon ? 'Coming soon' : 'Details soon'}
-            </span>
-          )}
+          ) : null}
         </div>
       </div>
     </motion.div>
@@ -104,39 +131,55 @@ function Portfolio() {
       title: 'M&A Stump Grinding',
       image: mnaStumpLogo,
       link: 'https://mnastumpgrinding.com/',
+      caseStudyLink: '/case-studies/ma-stump-grinding',
       description:
-        'Professional website for a stump grinding service company featuring service information, contact details, and service area coverage.',
-      tags: ['Web Design', 'Business', 'Service Industry'],
+        'Professional website and local growth for a stump grinding service company.',
+      tags: ['Web Design', 'Local Business'],
+      result: '39 Google reviews in 5 months',
     },
     {
       title: 'All Structure Maintenance',
       image: allStructureLogo,
       link: 'https://allstructuremaintenance.com',
+      caseStudyLink: '/case-studies/all-structure',
       description:
-        'Professional website for a comprehensive structure maintenance company showcasing services, expertise, and client testimonials.',
-      tags: ['Web Design', 'Business', 'Maintenance Services'],
+        'Lead-generating website with full conversion tracking for a structure maintenance company.',
+      tags: ['Web Design', 'SEO'],
+      result: 'Lead-gen site, full conversion tracking',
     },
     {
       title: 'Lyfestyle Tattoos',
       image: lyfestyleLogo,
       link: 'https://lyfestyletattoos.com',
+      caseStudyLink: '/case-studies/lyfestyle',
       description:
-        'Custom website for a professional tattoo studio featuring artist portfolios and booking system.',
-      tags: ['Web Design', 'E-commerce', 'Portfolio'],
+        'Custom website and social growth for a professional tattoo studio.',
+      tags: ['Web Design', 'Social Media'],
+      result: '0→2,100 followers, built from scratch',
+    },
+    {
+      title: 'Signature Tree & Home',
+      emoji: '🌳',
+      caseStudyLink: '/case-studies/signature-tree',
+      description:
+        'Social media growth that drove new customers for a tree-care company.',
+      tags: ['Social Media', 'Local Business'],
+      result: '100+ new customers from social',
     },
     {
       title: 'Dynamic Nexus',
       image: nexusLogo,
-      description: 'Custom app project — details coming soon.',
+      description: 'Our proprietary multi-client marketing-intelligence platform.',
       tags: ['Custom App', 'Product'],
-      comingSoon: true,
+      primaryCta: { label: 'Learn More', to: '/nexus' },
     },
     {
       title: 'NightSync',
       emoji: '🌙',
-      description: 'Custom app project — details coming soon.',
+      description:
+        'A social web app that gamifies going out — React/Next.js + Supabase.',
       tags: ['Custom App', 'Product'],
-      comingSoon: true,
+      primaryCta: { label: 'View Demo', to: '/nightsync' },
     },
     {
       title: 'Tampa NA',
@@ -144,29 +187,28 @@ function Portfolio() {
       link: 'https://tampa-na.org',
       description:
         'Community website with event management and resource directory.',
-      tags: ['Web Design', 'Community', 'Events'],
+      tags: ['Web Design', 'Community'],
     },
     {
       title: 'ProphitLine',
       image: prophitLineLogo,
       link: 'https://prophit-line.netlify.app/',
       description:
-        'A comprehensive prediction market aggregator platform combining data from multiple prediction platforms.',
-      tags: ['Prediction Markets', 'Data Aggregation', 'React'],
+        'Prediction market aggregator across Polymarket, Kalshi, and more.',
+      tags: ['Data Aggregation', 'React'],
     },
     {
       title: 'ANJ Sports Cards',
       image: anjLogo,
       link: 'https://anjsportscards.com',
       description:
-        'Modern e-commerce platform for sports card collectors featuring a sleek design and seamless shopping experience.',
-      tags: ['E-commerce', 'React', 'Netlify'],
+        'Modern e-commerce for sports card collectors.',
+      tags: ['E-commerce', 'React'],
     },
   ];
 
   return (
     <div className="min-h-screen">
-      {/* Hero — matches other pages */}
       <div className="bg-ink py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-ink via-primary-900 to-primary-800 opacity-90"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-500/20 via-transparent to-transparent"></div>
@@ -194,7 +236,6 @@ function Portfolio() {
         </div>
       </div>
 
-      {/* Grid */}
       <div className="bg-gradient-to-b from-white to-mint py-12 md:py-16">
         <div className="container mx-auto px-4">
           <motion.div
@@ -212,7 +253,6 @@ function Portfolio() {
         </div>
       </div>
 
-      {/* CTA */}
       <div className="bg-ink py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary-600/30 via-transparent to-primary-500/20"></div>
         <div className="container mx-auto px-4 text-center relative">

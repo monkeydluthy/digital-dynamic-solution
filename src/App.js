@@ -26,6 +26,9 @@ import LogoDesign from './pages/LogoDesign';
 import WebsiteMaintenance from './pages/WebsiteMaintenance';
 import SocialMediaMaintenance from './pages/SocialMediaMaintenance';
 import ContentCreation from './pages/ContentCreation';
+import CaseStudy from './pages/CaseStudy';
+import Nexus from './pages/Nexus';
+import NightSync from './pages/NightSync';
 
 function App() {
   return (
@@ -39,6 +42,9 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/nexus" element={<Nexus />} />
+          <Route path="/nightsync" element={<NightSync />} />
+          <Route path="/case-studies/:slug" element={<CaseStudy />} />
 
           {/* Example Routes */}
           <Route path="/examples/carousel" element={<CarouselExample />} />
