@@ -1,12 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import nexusLogo from '../assets/images/brand/dynamic-nexus-on-black.png';
+import clientsShot from '../assets/images/nexus/clients.png';
+import schedulingShot from '../assets/images/nexus/scheduling.png';
+import postsShot from '../assets/images/nexus/posts.png';
+import mlInsightsShot from '../assets/images/nexus/ml-insights.png';
 
 const capabilities = [
   'Multi-client dashboard',
   'Automated competitive intelligence',
   'Content scheduling & distribution',
   'Analytics that turn activity into insight',
+];
+
+const screenshots = [
+  {
+    src: clientsShot,
+    title: 'Clients',
+    caption: 'One hub for every client account and connected platform.',
+  },
+  {
+    src: schedulingShot,
+    title: 'Scheduling',
+    caption: 'Calendar, bulk, recurring, and queue — all in one place.',
+  },
+  {
+    src: postsShot,
+    title: 'Posts',
+    caption: 'Create, schedule, and publish across Facebook, LinkedIn, and more.',
+  },
+  {
+    src: mlInsightsShot,
+    title: 'ML Insights',
+    caption: 'Competitive intelligence and recommendations driven by your data.',
+  },
 ];
 
 function Nexus() {
@@ -53,24 +80,25 @@ function Nexus() {
             </ul>
           </div>
 
-          {/* Screenshot placeholders */}
           <h2 className="text-2xl md:text-3xl font-bold text-ink mb-6 text-center">
             Inside the platform
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-4">
-            {[1, 2, 3, 4].map((n) => (
-              <div
-                key={n}
-                className="aspect-video rounded-xl border border-dashed border-primary-300 bg-mint/60 flex flex-col items-center justify-center p-6 text-center"
-              >
-                <span className="text-primary-500 text-3xl mb-2" aria-hidden="true">
-                  ▢
-                </span>
-                <p className="text-ink font-semibold">Screenshot {n}</p>
-                <p className="text-muted text-sm mt-1">
-                  Placeholder — design polish coming
-                </p>
-              </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+            {screenshots.map((shot) => (
+              <figure key={shot.title} className="group">
+                <div className="overflow-hidden rounded-xl border border-primary-100 bg-ink shadow-sm">
+                  <img
+                    src={shot.src}
+                    alt={`Nexus ${shot.title} view`}
+                    className="w-full h-auto object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption className="mt-3 px-1">
+                  <p className="text-ink font-semibold text-lg">{shot.title}</p>
+                  <p className="text-muted text-sm mt-0.5">{shot.caption}</p>
+                </figcaption>
+              </figure>
             ))}
           </div>
         </div>
