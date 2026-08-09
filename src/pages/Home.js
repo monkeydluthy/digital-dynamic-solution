@@ -127,7 +127,7 @@ function Home() {
             {coreServices.map((service, index) => (
               <div
                 key={service.title}
-                className="bg-card p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-primary-100 text-center group animate-fade-in-up"
+                className="bg-card p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-primary-100 text-center group animate-fade-in-up h-full flex flex-col"
                 style={{ animationDelay: `${0.3 + index * 0.1}s` }}
               >
                 <div className="mb-6 flex justify-center">
@@ -141,8 +141,11 @@ function Home() {
                 <h3 className="text-2xl font-bold mb-4 text-ink">
                   {service.title}
                 </h3>
-                <p className="text-body mb-6">{service.description}</p>
-                <Link to={service.link} className="btn-teal w-full text-center">
+                <p className="text-body mb-6 flex-grow">{service.description}</p>
+                <Link
+                  to={service.link}
+                  className="btn-teal w-full text-center mt-auto"
+                >
                   Learn More
                 </Link>
               </div>

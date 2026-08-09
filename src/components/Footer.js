@@ -8,7 +8,10 @@ function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="text-center md:text-left">
-            <Link to="/" className="inline-flex items-center gap-3 mb-4 hover:opacity-90 transition-opacity">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-3 mb-4 hover:opacity-90 transition-opacity"
+            >
               <img
                 src={logo}
                 alt="Digital Dynamic Solution"
@@ -20,8 +23,12 @@ function Footer() {
                 Solution
               </span>
             </Link>
-            <p className="text-gray-400 mb-4">
-              Creating innovative digital solutions for modern businesses.
+            <p className="text-gray-400 mb-4 max-w-xs mx-auto md:mx-0">
+              Digital growth for local businesses and home-service contractors —
+              get found, followed &amp; booked.
+            </p>
+            <p className="text-primary-400 text-sm font-medium mb-4">
+              Serving Tampa Bay &amp; Beyond
             </p>
             <div className="flex justify-center md:justify-start space-x-4">
               <a
@@ -89,56 +96,83 @@ function Footer() {
               </a>
             </div>
           </div>
+
           <div className="hidden md:block">
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/services" className="text-gray-400 hover:text-primary-400">
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-primary-400"
+                >
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/portfolio" className="text-gray-400 hover:text-primary-400">
+                <Link
+                  to="/portfolio"
+                  className="text-gray-400 hover:text-primary-400"
+                >
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-400 hover:text-primary-400">
+                <Link
+                  to="/about"
+                  className="text-gray-400 hover:text-primary-400"
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-400 hover:text-primary-400">
+                <Link
+                  to="/contact"
+                  className="text-gray-400 hover:text-primary-400"
+                >
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/nexus"
+                  className="text-gray-400 hover:text-primary-400"
+                >
+                  Nexus
+                </Link>
+              </li>
             </ul>
           </div>
+
           <div className="hidden md:block">
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold mb-4">Core Lines</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/web-design" className="text-gray-400 hover:text-primary-400">
-                  Web Design
+                <Link
+                  to="/social-media"
+                  className="text-gray-400 hover:text-primary-400"
+                >
+                  Social Media Management
                 </Link>
               </li>
               <li>
-                <Link to="/seo" className="text-gray-400 hover:text-primary-400">
-                  SEO
+                <Link
+                  to="/web-design-seo"
+                  className="text-gray-400 hover:text-primary-400"
+                >
+                  Web Design &amp; SEO
                 </Link>
               </li>
               <li>
-                <Link to="/social-media" className="text-gray-400 hover:text-primary-400">
-                  Social Media
-                </Link>
-              </li>
-              <li>
-                <Link to="/content-creation" className="text-gray-400 hover:text-primary-400">
-                  Content Creation
+                <Link
+                  to="/app-development"
+                  className="text-gray-400 hover:text-primary-400"
+                >
+                  Custom App Development
                 </Link>
               </li>
             </ul>
           </div>
+
           <div className="text-center md:text-left">
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-gray-400">
@@ -162,11 +196,11 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
           <p>
-            Copyright © {new Date().getFullYear()} Digital Dynamic Solution |
-            Anthony Luth | Freelance Website Developer & Digital Marketing
-            Consultant
+            Copyright © {new Date().getFullYear()} Digital Dynamic Solution LLC
+            · Anthony Luth, Founder
           </p>
         </div>
       </div>
