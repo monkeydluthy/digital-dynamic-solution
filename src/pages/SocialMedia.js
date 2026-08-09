@@ -1,13 +1,21 @@
 import React from 'react';
 
-const services = [
+const included = [
   'Content Strategy',
   'Community Management',
   'Paid Advertising',
   'Analytics & Reporting',
+  'Google Business Profile & Reviews',
+  'Local Distribution',
 ];
 
-const platforms = ['Facebook & Instagram', 'LinkedIn', 'X (Twitter)', 'TikTok'];
+const platforms = [
+  'Facebook & Instagram',
+  'LinkedIn',
+  'X',
+  'TikTok',
+  'Google',
+];
 
 function SocialMedia() {
   return (
@@ -21,9 +29,9 @@ function SocialMedia() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white tracking-tight">
               Social Media Management
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Stay consistent, grow your following, and turn attention into
-              booked jobs for your local business.
+            <p className="text-lg md:text-xl text-primary-400 mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
+              Done-for-you social that keeps you found, followed &amp; booked —
+              content, distribution, reviews, and reporting, all handled.
             </p>
             <a href="tel:+18139970321" className="btn-teal text-lg !px-8 !py-4">
               Call or text 813.997.0321
@@ -34,10 +42,10 @@ function SocialMedia() {
 
       {/* Proof */}
       <div className="bg-mint py-8 border-b border-primary-100">
-        <div className="container mx-auto px-4 max-w-3xl text-center">
-          <p className="text-ink text-lg md:text-xl font-medium leading-relaxed">
-            Grew a tattoo studio from 0 to 2,100 followers and a tree-care
-            company past 100 new customers.
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <p className="text-primary-600 text-base md:text-lg font-semibold leading-relaxed">
+            0 → 2,100 followers for a tattoo studio · 100+ new customers for a
+            tree-care company · 39 Google reviews in 5 months
           </p>
         </div>
       </div>
@@ -45,21 +53,13 @@ function SocialMedia() {
       {/* Content */}
       <div className="bg-gradient-to-b from-white to-mint py-16 md:py-20">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-ink mb-4">
-              What we handle
-            </h2>
-            <p className="text-body text-lg max-w-2xl mx-auto">
-              A clear social system that keeps you visible and converting —
-              without you living in the apps all day.
-            </p>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <div className="bg-card rounded-xl p-8 border border-primary-100">
-              <h3 className="text-2xl font-bold text-ink mb-6">Our services</h3>
+              <h2 className="text-2xl font-bold text-ink mb-6">
+                What&apos;s Included
+              </h2>
               <ul className="space-y-4">
-                {services.map((item) => (
+                {included.map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="text-primary-500 font-bold mt-0.5">✓</span>
                     <span className="text-ink font-medium">{item}</span>
@@ -69,9 +69,9 @@ function SocialMedia() {
             </div>
 
             <div className="bg-card rounded-xl p-8 border border-primary-100">
-              <h3 className="text-2xl font-bold text-ink mb-6">
-                Platforms we cover
-              </h3>
+              <h2 className="text-2xl font-bold text-ink mb-6">
+                Platforms We Cover
+              </h2>
               <ul className="space-y-4">
                 {platforms.map((item) => (
                   <li key={item} className="flex items-start gap-3">
@@ -89,6 +89,9 @@ function SocialMedia() {
       <div className="bg-ink py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary-600/30 via-transparent to-primary-500/20"></div>
         <div className="container mx-auto px-4 text-center relative">
+          <p className="text-xl md:text-2xl text-white font-medium mb-8">
+            Ready to get booked?
+          </p>
           <a href="tel:+18139970321" className="btn-teal text-lg !px-10 !py-4">
             Call or text 813.997.0321
           </a>

@@ -1,30 +1,31 @@
 import React from 'react';
+import nexusLogo from '../assets/images/brand/dynamic-nexus-on-black.png';
 
-const services = [
-  'Custom web & mobile apps',
-  'Lead capture & CRM tools',
-  'Workflow automation',
-  'Internal dashboards',
-  'Integrations & APIs',
-  'Ongoing iteration & support',
+const whatWeBuild = [
+  'Custom Web Apps',
+  'SaaS Platforms & MVPs',
+  'AI Automation & Tools',
+  'Integrations',
+  'UX/UI Design',
+  'Ongoing Support & DevOps',
 ];
 
-const benefits = [
+const highlights = [
   {
-    title: 'Built for your workflow',
-    description: 'Tools scoped to how you actually run the business — not generic templates.',
+    title: 'End-to-End Delivery',
+    description: 'Design through deployment — we own the whole build.',
   },
   {
-    title: 'Clear scope, clear outcomes',
-    description: 'We define what success looks like before we write a line of code.',
+    title: 'Modern, Scalable Stack',
+    description: 'React/Next.js, Supabase.',
   },
   {
-    title: 'Tracked and measurable',
-    description: 'Know what the app is doing for leads, bookings, and ops.',
+    title: 'Milestone-Based',
+    description: 'Clear stages, no surprises.',
   },
   {
-    title: 'Hands-on partnership',
-    description: 'Direct access to Anthony from discovery through launch.',
+    title: 'We Build Our Own Software',
+    description: 'Nexus is proof we ship real products.',
   },
 ];
 
@@ -40,9 +41,9 @@ function Consulting() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white tracking-tight">
               Custom App Development
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Purpose-built tools and apps that streamline how you run and grow
-              — from lead capture to day-to-day operations.
+            <p className="text-lg md:text-xl text-primary-400 mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
+              From first wireframe to launched product — custom web apps, SaaS
+              platforms, and automation, built end to end.
             </p>
             <a href="tel:+18139970321" className="btn-teal text-lg !px-8 !py-4">
               Call or text 813.997.0321
@@ -51,41 +52,74 @@ function Consulting() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* What we build + highlights */}
       <div className="bg-gradient-to-b from-white to-mint py-16 md:py-20">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-ink mb-4">
-              Software that fits how you work
-            </h2>
-            <p className="text-body text-lg max-w-2xl mx-auto">
-              From Dynamic Nexus to NightSync and client-specific builds — we
-              design and ship custom tools that save time and grow revenue.
-            </p>
-          </div>
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div className="bg-card rounded-xl p-8 border border-primary-100">
+              <h2 className="text-2xl font-bold text-ink mb-6">What We Build</h2>
+              <ul className="space-y-4">
+                {whatWeBuild.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="text-primary-500 font-bold mt-0.5">✓</span>
+                    <span className="text-ink font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div className="bg-card rounded-xl p-8 border border-primary-100 mb-8">
-            <h3 className="text-2xl font-bold text-ink mb-6">What we build</h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {services.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="text-primary-500 font-bold mt-0.5">✓</span>
-                  <span className="text-ink font-medium">{item}</span>
-                </li>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {highlights.map((item) => (
+                <div
+                  key={item.title}
+                  className="bg-card rounded-xl p-6 border border-primary-100"
+                >
+                  <h3 className="text-lg font-bold text-ink mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-body text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
+          {/* Proof blocks */}
+          <h2 className="text-2xl md:text-3xl font-bold text-ink mb-6 text-center">
+            Products we&apos;ve shipped
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((item) => (
-              <div
-                key={item.title}
-                className="bg-card rounded-xl p-6 border border-primary-100"
-              >
-                <h3 className="text-xl font-bold text-ink mb-2">{item.title}</h3>
-                <p className="text-body">{item.description}</p>
+            <div className="bg-card rounded-xl border border-primary-100 overflow-hidden">
+              <div className="bg-ink h-40 flex items-center justify-center text-6xl">
+                <span role="img" aria-label="NightSync">
+                  🌙
+                </span>
               </div>
-            ))}
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-ink mb-2">NightSync</h3>
+                <p className="text-body leading-relaxed">
+                  A social web app that gamifies going out — full product design
+                  (18 screens) + build on React/Next.js + Supabase.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-card rounded-xl border border-primary-100 overflow-hidden">
+              <div className="bg-ink h-40 flex items-center justify-center p-6">
+                <img
+                  src={nexusLogo}
+                  alt="Dynamic Nexus"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-ink mb-2">Nexus</h3>
+                <p className="text-body leading-relaxed">
+                  Our proprietary multi-client marketing-intelligence platform.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -93,7 +127,11 @@ function Consulting() {
       {/* CTA */}
       <div className="bg-ink py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary-600/30 via-transparent to-primary-500/20"></div>
-        <div className="container mx-auto px-4 text-center relative">
+        <div className="container mx-auto px-4 text-center relative max-w-3xl">
+          <p className="text-xl md:text-2xl text-white font-medium mb-8 leading-relaxed">
+            Have an idea, or a process that should be software? Let&apos;s build
+            it.
+          </p>
           <a href="tel:+18139970321" className="btn-teal text-lg !px-10 !py-4">
             Call or text 813.997.0321
           </a>
