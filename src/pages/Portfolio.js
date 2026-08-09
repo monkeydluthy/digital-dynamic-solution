@@ -136,7 +136,7 @@ function Portfolio() {
       description:
         'Professional website and local growth for a stump grinding service company.',
       tags: ['Web Design', 'Local Business'],
-      result: '39 Google reviews in 5 months',
+      result: '39 Google reviews in 6 months',
     },
     {
       title: 'All Structure Maintenance',

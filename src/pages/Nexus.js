@@ -2,33 +2,107 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import nexusLogo from '../assets/images/brand/dynamic-nexus-on-black.png';
 
+const capabilities = [
+  'Multi-client dashboard',
+  'Automated competitive intelligence',
+  'Content scheduling & distribution',
+  'Analytics that turn activity into insight',
+];
+
 function Nexus() {
   return (
     <div className="min-h-screen">
+      {/* Hero */}
       <div className="bg-ink py-20 md:py-28 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-ink via-primary-900 to-primary-800 opacity-90"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-500/20 via-transparent to-transparent"></div>
         <div className="container mx-auto px-4 relative max-w-3xl text-center">
           <img
             src={nexusLogo}
             alt="Dynamic Nexus"
-            className="mx-auto max-h-28 mb-8 object-contain"
+            className="mx-auto max-h-24 mb-8 object-contain"
           />
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Dynamic Nexus
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white tracking-tight">
+            Nexus — Our Marketing Intelligence Platform
           </h1>
-          <p className="text-primary-400 text-lg md:text-xl font-medium mb-8 leading-relaxed">
-            Our proprietary multi-client marketing-intelligence platform.
+          <p className="text-lg md:text-xl text-primary-400 mb-8 font-medium leading-relaxed">
+            Nexus is the proprietary platform we built to power our own social
+            &amp; marketing services — a multi-client command center most
+            agencies only wish they had.
           </p>
-          <p className="text-white/80 mb-8">
-            Full product page coming in the next build block. In the meantime,
-            ask about Nexus when we talk.
+          <a href="tel:+18139970321" className="btn-teal text-lg !px-8 !py-4">
+            Call or text 813.997.0321
+          </a>
+        </div>
+      </div>
+
+      {/* What it does */}
+      <div className="bg-gradient-to-b from-white to-mint py-16 md:py-20">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="bg-card rounded-xl p-8 md:p-10 border border-primary-100 mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-ink mb-6">
+              What It Does
+            </h2>
+            <ul className="space-y-4">
+              {capabilities.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="text-primary-500 font-bold mt-0.5">✓</span>
+                  <span className="text-ink font-medium text-lg">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Screenshot placeholders */}
+          <h2 className="text-2xl md:text-3xl font-bold text-ink mb-6 text-center">
+            Inside the platform
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-4">
+            {[1, 2, 3, 4].map((n) => (
+              <div
+                key={n}
+                className="aspect-video rounded-xl border border-dashed border-primary-300 bg-mint/60 flex flex-col items-center justify-center p-6 text-center"
+              >
+                <span className="text-primary-500 text-3xl mb-2" aria-hidden="true">
+                  ▢
+                </span>
+                <p className="text-ink font-semibold">Screenshot {n}</p>
+                <p className="text-muted text-sm mt-1">
+                  Placeholder — design polish coming
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Why it matters */}
+      <div className="bg-mint py-12 border-y border-primary-100">
+        <div className="container mx-auto px-4 max-w-3xl text-center">
+          <h2 className="text-2xl font-bold text-ink mb-4">Why It Matters</h2>
+          <p className="text-primary-600 text-lg md:text-xl font-medium leading-relaxed">
+            The same engineering that powers Nexus is what we bring to your
+            custom app or automation.
+          </p>
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="bg-ink py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-600/30 via-transparent to-primary-500/20"></div>
+        <div className="container mx-auto px-4 text-center relative max-w-3xl">
+          <p className="text-xl md:text-2xl text-white font-medium mb-8 leading-relaxed">
+            Want the competitive edge? Ask about our Pro plan.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="tel:+18139970321" className="btn-teal">
+            <a
+              href="tel:+18139970321"
+              className="btn-teal text-lg !px-10 !py-4"
+            >
               Call or text 813.997.0321
             </a>
-            <Link to="/portfolio" className="btn-teal-outline">
-              Back to Portfolio
+            <Link to="/app-development" className="btn-teal-outline text-lg !px-10 !py-4">
+              Custom App Development
             </Link>
           </div>
         </div>
