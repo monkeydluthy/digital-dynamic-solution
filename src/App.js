@@ -11,11 +11,6 @@ import Services from './pages/Services';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
-// Example Pages
-import CarouselExample from './pages/ExamplePages/CarouselExample';
-import DropdownExample from './pages/ExamplePages/DropdownExample';
-import FaqExample from './pages/ExamplePages/FaqExample';
-
 // Service Pages
 import WebDesign from './pages/WebDesign';
 import InternetMarketing from './pages/InternetMarketing';
@@ -45,11 +40,6 @@ function App() {
           <Route path="/nexus" element={<Nexus />} />
           <Route path="/nightsync" element={<NightSync />} />
           <Route path="/case-studies/:slug" element={<CaseStudy />} />
-
-          {/* Example Routes */}
-          <Route path="/examples/carousel" element={<CarouselExample />} />
-          <Route path="/examples/dropdown" element={<DropdownExample />} />
-          <Route path="/examples/faq" element={<FaqExample />} />
 
           {/* Service Routes */}
           <Route path="/web-design" element={<WebDesign />} />
