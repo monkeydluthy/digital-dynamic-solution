@@ -21,22 +21,22 @@ const screenshots = [
   {
     src: homeShot,
     title: 'Home',
-    caption: 'Hotspots, weekly challenges, and leaderboard — the night starts here.',
+    caption: 'Hotspots, challenges, and leaderboard in one feed.',
   },
   {
     src: venueShot,
     title: "Who's Here",
-    caption: 'See live groups at a venue and check in with friends.',
+    caption: 'See live groups at a venue and check in.',
   },
   {
     src: eventShot,
     title: 'Events',
-    caption: 'Event details, who’s going, and ticket purchase in one flow.',
+    caption: 'Details, who’s going, and ticket purchase.',
   },
   {
     src: venueDashboardShot,
     title: 'Venue Dashboard',
-    caption: 'Live traffic, DJ lineup, hotspots, and ticket sales for venues.',
+    caption: 'Live traffic, DJs, hotspots, and ticket sales.',
   },
 ];
 
@@ -137,27 +137,27 @@ function NightSync() {
             <h2 className="text-2xl font-bold text-ink mb-6 text-center">
               Inside the product
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 items-stretch">
               {screenshots.map((shot, index) => (
-                <figure key={shot.title} className="group">
+                <figure key={shot.title} className="group flex flex-col h-full">
                   <button
                     type="button"
                     onClick={() => setLightboxIndex(index)}
-                    className="w-full text-left overflow-hidden rounded-2xl border border-primary-100 bg-ink shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+                    className="w-full aspect-[9/19.5] flex items-center justify-center overflow-hidden rounded-2xl border border-primary-100 bg-ink shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
                     aria-label={`View ${shot.title} screenshot larger`}
                   >
                     <img
                       src={shot.src}
                       alt={`NightSync ${shot.title} screen`}
-                      className="w-full h-auto object-contain mx-auto transition-transform duration-500 group-hover:scale-[1.02]"
+                      className="max-h-full max-w-full w-auto h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                       loading="lazy"
                     />
                   </button>
-                  <figcaption className="mt-3 px-1 text-center sm:text-left">
+                  <figcaption className="mt-3 px-1 text-center flex flex-col flex-1">
                     <p className="text-ink font-semibold text-sm md:text-base">
                       {shot.title}
                     </p>
-                    <p className="text-muted text-xs md:text-sm mt-0.5 hidden sm:block">
+                    <p className="text-muted text-xs md:text-sm mt-1 leading-snug">
                       {shot.caption}
                     </p>
                   </figcaption>

@@ -180,7 +180,7 @@ function Portfolio() {
       description:
         'A social web app that gamifies going out — React/Next.js + Supabase.',
       tags: ['Custom App', 'Product'],
-      primaryCta: { label: 'View Demo', to: '/nightsync' },
+      primaryCta: { label: 'Learn More', to: '/nightsync' },
     },
     {
       title: 'Tampa NA',
