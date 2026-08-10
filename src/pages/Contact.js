@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
+
+const CONTACT_EMAIL = 'luthdigitalconsult@gmail.com';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -58,13 +59,39 @@ function Contact() {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
+    const data = new FormData(form.current);
+    const payload = {
+      name: data.get('name'),
+      email: data.get('email'),
+      message: data.get('message'),
+      _subject: 'New message from Digital Dynamic Solution',
+      _replyto: data.get('email'),
+      _template: 'table',
+      _captcha: 'false',
+    };
+
     try {
-      await emailjs.sendForm(
-        'service_2jqp68p',
-        'template_gy0d5xj',
-        form.current,
-        'hguBxp_4_8yE-3O7q'
+      const response = await fetch(
+        `https://formsubmit.co/ajax/${CONTACT_EMAIL}`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify(payload),
+        }
       );
+
+      if (!response.ok) {
+        throw new Error('Request failed');
+      }
+
+      const result = await response.json();
+      if (result.success === false || result.success === 'false') {
+        throw new Error(result.message || 'Send failed');
+      }
+
       setSubmitStatus('success');
       form.current.reset();
     } catch (error) {
@@ -133,6 +160,15 @@ function Contact() {
                   className="space-y-4 md:space-y-6"
                   onSubmit={handleSubmit}
                 >
+                  {/* Honeypot */}
+                  <input
+                    type="text"
+                    name="_gotcha"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    className="hidden"
+                    aria-hidden="true"
+                  />
                   <div>
                     <label
                       htmlFor="name"
@@ -194,7 +230,14 @@ function Contact() {
                   )}
                   {submitStatus === 'error' && (
                     <p className="text-red-600 text-center">
-                      Error sending message. Please try again.
+                      Error sending message. Please try again, or email{' '}
+                      <a
+                        href={`mailto:${CONTACT_EMAIL}`}
+                        className="underline"
+                      >
+                        {CONTACT_EMAIL}
+                      </a>
+                      .
                     </p>
                   )}
                 </form>
@@ -210,8 +253,8 @@ function Contact() {
                 <ContactInfo
                   icon="📧"
                   title="Email"
-                  content="luthdigitalconsult@gmail.com"
-                  link="mailto:luthdigitalconsult@gmail.com"
+                  content={CONTACT_EMAIL}
+                  link={`mailto:${CONTACT_EMAIL}`}
                 />
                 <ContactInfo
                   icon="📱"
