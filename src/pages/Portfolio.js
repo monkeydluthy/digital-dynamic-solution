@@ -10,6 +10,7 @@ import prophitLineLogo from '../assets/images/prophit-line.JPG';
 import allStructureLogo from '../assets/images/all-structure.png';
 import mnaStumpLogo from '../assets/images/mna-stump.jpg';
 import nexusLogo from '../assets/images/brand/dynamic-nexus-on-black.png';
+import roofLeadIqLogo from '../assets/images/rooflead-iq-logo.png';
 import signatureTreeLogo from '../assets/images/signature-tree-logo.png';
 
 const fadeInUp = {
@@ -96,16 +97,32 @@ function PortfolioCard({
             </Link>
           )}
           {primaryCta ? (
-            <Link
-              to={primaryCta.to}
-              className={`${
-                caseStudyLink
-                  ? 'inline-block w-full text-center px-6 py-2.5 rounded-lg border-2 border-primary-500 text-primary-600 font-semibold hover:bg-mint transition-colors'
-                  : 'btn-teal w-full text-center'
-              }`}
-            >
-              {primaryCta.label}
-            </Link>
+            primaryCta.href ? (
+              <a
+                href={primaryCta.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${
+                  caseStudyLink
+                    ? 'inline-flex w-full items-center justify-center gap-2 px-6 py-2.5 rounded-lg border-2 border-primary-500 text-primary-600 font-semibold hover:bg-mint transition-colors'
+                    : 'btn-teal w-full text-center inline-flex items-center justify-center gap-2'
+                }`}
+              >
+                {primaryCta.label}
+                <FaExternalLinkAlt className="text-sm" />
+              </a>
+            ) : (
+              <Link
+                to={primaryCta.to}
+                className={`${
+                  caseStudyLink
+                    ? 'inline-block w-full text-center px-6 py-2.5 rounded-lg border-2 border-primary-500 text-primary-600 font-semibold hover:bg-mint transition-colors'
+                    : 'btn-teal w-full text-center'
+                }`}
+              >
+                {primaryCta.label}
+              </Link>
+            )
           ) : link ? (
             <a
               href={link}
@@ -181,6 +198,17 @@ function Portfolio() {
         'A social web app that gamifies going out — React/Next.js + Supabase.',
       tags: ['Custom App', 'Product'],
       primaryCta: { label: 'Learn More', to: '/nightsync' },
+    },
+    {
+      title: 'RoofLead IQ',
+      image: roofLeadIqLogo,
+      description:
+        'A proprietary lead-generation platform for Tampa Bay roofing contractors — built and operated in-house. Permit-verified, exclusive leads delivered weekly to a single contractor per ZIP.',
+      tags: ['Custom App', 'Product'],
+      primaryCta: {
+        label: 'Learn More',
+        href: 'https://roofleadiq.digitaldynamicsolution.com/',
+      },
     },
     {
       title: 'Tampa NA',
