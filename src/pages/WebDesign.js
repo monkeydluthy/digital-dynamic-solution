@@ -1,4 +1,5 @@
 import React from 'react';
+import RelatedServices from '../components/RelatedServices';
 
 const process = [
   'Discovery & Planning',
@@ -80,6 +81,29 @@ function WebDesign() {
           </div>
         </div>
       </div>
+
+      <RelatedServices
+        items={[
+          {
+            title: 'Search Engine Optimization',
+            to: '/seo',
+            description:
+              'Local rankings, Google Business Profile, and the pages that convert.',
+          },
+          {
+            title: 'Website Maintenance',
+            to: '/website-maintenance',
+            description:
+              'Updates, speed, and uptime after the site is live.',
+          },
+          {
+            title: 'Social Media Management',
+            to: '/social-media',
+            description:
+              'Keep the audience you earned from search coming back.',
+          },
+        ]}
+      />
 
       {/* CTA */}
       <div className="bg-ink py-16 relative overflow-hidden">

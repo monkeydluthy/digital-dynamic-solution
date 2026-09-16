@@ -1,4 +1,5 @@
 import React from 'react';
+import RelatedServices from '../components/RelatedServices';
 
 const included = [
   'Content Strategy',
@@ -84,6 +85,29 @@ function SocialMedia() {
           </div>
         </div>
       </div>
+
+      <RelatedServices
+        items={[
+          {
+            title: 'Web Design & SEO',
+            to: '/web-design-seo',
+            description:
+              'A site that ranks locally and turns searchers into calls.',
+          },
+          {
+            title: 'Content Creation',
+            to: '/content-creation',
+            description:
+              'Posts, copy, and visuals that keep your feed consistent.',
+          },
+          {
+            title: 'Custom App Development',
+            to: '/app-development',
+            description:
+              'Tools that capture leads and run the work behind the posts.',
+          },
+        ]}
+      />
 
       {/* CTA */}
       <div className="bg-ink py-16 relative overflow-hidden">

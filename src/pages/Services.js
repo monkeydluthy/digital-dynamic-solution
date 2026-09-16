@@ -38,6 +38,7 @@ const coreServices = [
       { title: 'Search Engine Optimization', link: '/seo' },
       { title: 'Customized Logo Design', link: '/logo-design' },
       { title: 'Website Maintenance', link: '/website-maintenance' },
+      { title: 'Internet Marketing', link: '/internet-marketing' },
     ],
   },
   {
