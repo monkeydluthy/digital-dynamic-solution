@@ -12,6 +12,7 @@ import mnaStumpLogo from '../assets/images/mna-stump.jpg';
 import nexusLogo from '../assets/images/brand/dynamic-nexus-on-black.png';
 import roofLeadIqLogo from '../assets/images/rooflead-iq-logo.png';
 import signatureTreeLogo from '../assets/images/signature-tree-logo.png';
+import dagesServicesLogo from '../assets/images/dages-services-logo.png';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -183,6 +184,15 @@ function Portfolio() {
         'Social media growth that drove new customers for a tree-care company.',
       tags: ['Social Media', 'Local Business'],
       result: '100+ new customers from social',
+    },
+    {
+      title: 'Dages Services',
+      image: dagesServicesLogo,
+      link: 'https://dagesservices.com',
+      description:
+        'Lead-generating website for a Plant City tree service — forms, job portfolio, and an owner admin with push alerts.',
+      tags: ['Web Design', 'Local Business'],
+      result: 'Full site live with lead capture & admin',
     },
     {
       title: 'Dynamic Nexus',
