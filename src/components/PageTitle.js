@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import { matchPath, useLocation } from 'react-router-dom';
+import { getTierBySlug, SITE_ORIGIN } from '../data/pricing';
+import { PRICING_CONTENT } from '../data/pricingContent';
 
 export const DEFAULT_TITLE =
   'DDS – Tampa Bay Digital Marketing for Local Service Businesses';
@@ -29,6 +31,12 @@ const PAGE_META = [
     title: 'DDS – Tampa Bay Digital Marketing Services for Local Businesses',
     description:
       'Social media, web design & SEO, and custom apps for Tampa Bay local service businesses — month-to-month, with tracked results.',
+  },
+  {
+    path: '/pricing',
+    title: 'Social Media Management Pricing | Tampa Bay | DDS',
+    description:
+      'Transparent social media management pricing for local businesses: Starter $400, Growth $750, Pro $1,500 per month. Month-to-month, no contracts.',
   },
   {
     path: '/about',
@@ -135,6 +143,16 @@ function setMetaContent(selector, content) {
   }
 }
 
+function setCanonical(url) {
+  let link = document.querySelector('link[rel="canonical"]');
+  if (!link) {
+    link = document.createElement('link');
+    link.setAttribute('rel', 'canonical');
+    document.head.appendChild(link);
+  }
+  link.setAttribute('href', url);
+}
+
 function getPageMeta(pathname) {
   const caseMatch = matchPath(
     { path: '/case-studies/:slug', end: true },
@@ -148,28 +166,61 @@ function getPageMeta(pathname) {
         'DDS – Tampa Bay Digital Marketing Case Study',
       description:
         'A Tampa Bay digital marketing case study from Digital Dynamic Solution — results for a local service business.',
+      canonical: `${SITE_ORIGIN}/case-studies/${slug}`,
     };
   }
 
-  return (
-    PAGE_META.find((page) =>
-      matchPath({ path: page.path, end: true }, pathname)
-    ) || { title: DEFAULT_TITLE, description: DEFAULT_DESCRIPTION }
+  const pricingMatch = matchPath(
+    { path: '/pricing/:slug', end: true },
+    pathname
   );
+  if (pricingMatch) {
+    const slug = pricingMatch.params.slug;
+    const tier = getTierBySlug(slug);
+    const content = PRICING_CONTENT[slug];
+    if (tier && content) {
+      return {
+        title: content.title,
+        description: content.meta,
+        canonical: `${SITE_ORIGIN}/pricing/${slug}`,
+      };
+    }
+  }
+
+  const page = PAGE_META.find((entry) =>
+    matchPath({ path: entry.path, end: true }, pathname)
+  );
+
+  if (page) {
+    return {
+      title: page.title,
+      description: page.description,
+      canonical: `${SITE_ORIGIN}${page.path === '/' ? '/' : page.path}`,
+    };
+  }
+
+  return {
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    canonical: `${SITE_ORIGIN}${pathname}`,
+  };
 }
 
 function PageTitle() {
   const { pathname } = useLocation();
-  const { title, description } = getPageMeta(pathname);
+  const { title, description, canonical } = getPageMeta(pathname);
 
   useEffect(() => {
     document.title = title;
     setMetaContent('meta[name="description"]', description);
     setMetaContent('meta[property="og:title"]', title);
     setMetaContent('meta[property="og:description"]', description);
+    setMetaContent('meta[property="og:url"]', canonical);
     setMetaContent('meta[property="twitter:title"]', title);
     setMetaContent('meta[property="twitter:description"]', description);
-  }, [title, description]);
+    setMetaContent('meta[property="twitter:url"]', canonical);
+    setCanonical(canonical);
+  }, [title, description, canonical]);
 
   return null;
 }

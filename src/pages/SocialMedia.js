@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import RelatedServices from '../components/RelatedServices';
+import { PHONE } from '../data/pricing';
 
 const included = [
   'Content Strategy',
@@ -34,9 +36,17 @@ function SocialMedia() {
               Done-for-you social that keeps you found, followed &amp; booked —
               content, distribution, reviews, and reporting, all handled.
             </p>
-            <a href="tel:+18139970321" className="btn-teal text-lg !px-8 !py-4">
-              Call or text 813.997.0321
+            <a href={`tel:${PHONE.tel}`} className="btn-teal text-lg !px-8 !py-4">
+              Call or text {PHONE.display}
             </a>
+            <p className="mt-5">
+              <Link
+                to="/pricing"
+                className="text-primary-400 font-semibold hover:text-primary-300"
+              >
+                See pricing →
+              </Link>
+            </p>
           </div>
         </div>
       </div>

@@ -25,6 +25,8 @@ import ContentCreation from './pages/ContentCreation';
 import CaseStudy from './pages/CaseStudy';
 import Nexus from './pages/Nexus';
 import NightSync from './pages/NightSync';
+import Pricing from './pages/Pricing';
+import PricingTier from './pages/PricingTier';
 
 function App() {
   return (
@@ -37,6 +39,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/pricing/:slug" element={<PricingTier />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/nexus" element={<Nexus />} />

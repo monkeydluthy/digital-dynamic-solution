@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import companyLogo from '../assets/images/brand/dds-monogram-color-on-white.jpg';
+import PricingTierCard from '../components/PricingTierCard';
+import { TIERS, getTierOrderClass } from '../data/pricing';
 
 const proofStats = [
   {
@@ -151,6 +153,36 @@ function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Pricing teaser */}
+      <div className="py-20 bg-white border-t border-primary-100">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-4 text-ink">
+            Straightforward pricing. No &quot;contact us for a quote.&quot;
+          </h2>
+          <p className="text-xl text-center text-body mb-12 max-w-2xl mx-auto">
+            Three done-for-you social media plans, all month-to-month.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+            {TIERS.map((tier) => (
+              <PricingTierCard
+                key={tier.slug}
+                tier={tier}
+                compact
+                className={getTierOrderClass(tier.slug)}
+              />
+            ))}
+          </div>
+          <p className="text-center mt-10">
+            <Link
+              to="/pricing"
+              className="text-primary-600 font-semibold text-lg hover:text-primary-500"
+            >
+              Compare all plans →
+            </Link>
+          </p>
         </div>
       </div>
 

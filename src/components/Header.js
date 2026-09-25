@@ -46,6 +46,9 @@ function Header() {
             <Link to="/services" className="hover:text-primary-400 transition-colors">
               Services
             </Link>
+            <Link to="/pricing" className="hover:text-primary-400 transition-colors">
+              Pricing
+            </Link>
             <Link to="/portfolio" className="hover:text-primary-400 transition-colors">
               Portfolio
             </Link>
@@ -75,6 +78,13 @@ function Header() {
               onClick={() => setIsOpen(false)}
             >
               Services
+            </Link>
+            <Link
+              to="/pricing"
+              className="text-2xl font-semibold text-white hover:text-primary-400 bg-primary-900/40 px-8 py-3 rounded-lg w-64 text-center transition-all duration-300 hover:bg-primary-800/50"
+              onClick={() => setIsOpen(false)}
+            >
+              Pricing
             </Link>
             <Link
               to="/portfolio"
