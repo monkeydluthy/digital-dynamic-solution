@@ -60,7 +60,7 @@ function Pricing() {
             business is. Everything is month-to-month, so we earn the next month
             every month.
           </p>
-          <p className="text-white/80 leading-relaxed">
+          <p className="text-white/80 leading-relaxed mb-6">
             Not sure which fits? Call us and we&apos;ll tell you honestly, even
             if that means the smaller plan.{' '}
             <a
@@ -69,6 +69,14 @@ function Pricing() {
             >
               {PHONE.display}
             </a>
+          </p>
+          <p>
+            <Link
+              to="/social-media"
+              className="text-primary-400 font-semibold hover:text-primary-300"
+            >
+              How our social media management service works →
+            </Link>
           </p>
         </div>
       </div>

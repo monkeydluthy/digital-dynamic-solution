@@ -42,6 +42,8 @@ export const TIERS = [
   },
 ];
 
+export const SETUP_FEE = { min: 300, max: 500 };
+
 export const TERMS = {
   setupFee: '$300–$500 one-time setup — optional',
   contract: 'Month-to-month. No long-term lock-in on any plan.',
@@ -49,9 +51,20 @@ export const TERMS = {
     'Websites, SEO & custom software are custom-quoted and scoped per project.',
 };
 
-export const PHONE = { display: '813.997.0321', tel: '+18139970321' };
+export const PHONE = {
+  display: '813.997.0321',
+  tel: '+18139970321',
+  schema: '+1-813-997-0321',
+};
+
+export const SOCIAL_PROFILES = {
+  facebook: 'https://www.facebook.com/digitaldynamicsolution/',
+  linkedin: 'https://www.linkedin.com/in/anthony-luth/',
+};
 
 export const SITE_ORIGIN = 'https://digitaldynamicsolution.com';
+
+export const ORGANIZATION_ID = `${SITE_ORIGIN}/#organization`;
 
 export const HUB_FAQS = [
   {
@@ -91,6 +104,10 @@ export function formatPrice(price) {
     currency: 'USD',
     minimumFractionDigits: 0,
   }).format(price);
+}
+
+export function formatSetupFeeRange() {
+  return `${formatPrice(SETUP_FEE.min)}–${formatPrice(SETUP_FEE.max)}`;
 }
 
 export function getTierBySlug(slug) {

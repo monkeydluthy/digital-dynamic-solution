@@ -64,7 +64,15 @@ function CoreServiceCard({ title, description, icon, link }) {
       </div>
       <h3 className="text-2xl font-bold mb-4 text-ink">{title}</h3>
       <p className="text-body mb-6 flex-grow">{description}</p>
-      <Link to={link} className="btn-teal w-full text-center mt-auto">
+      <Link
+        to={link}
+        className="btn-teal w-full text-center mt-auto"
+        aria-label={
+          title === 'Social Media Management'
+            ? 'Social media management service'
+            : undefined
+        }
+      >
         Learn More
       </Link>
     </motion.div>

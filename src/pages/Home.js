@@ -26,6 +26,8 @@ const coreServices = [
       'Stay consistent, grow your following, and turn attention into booked jobs for your local business.',
     icon: 'fa-share-nodes',
     link: '/social-media',
+    cta: 'Explore social media management',
+    ariaLabel: 'Social media management service',
   },
   {
     title: 'Web Design & SEO',
@@ -147,8 +149,9 @@ function Home() {
                 <Link
                   to={service.link}
                   className="btn-teal w-full text-center mt-auto"
+                  aria-label={service.ariaLabel}
                 >
-                  Learn More
+                  {service.cta || 'Learn More'}
                 </Link>
               </div>
             ))}

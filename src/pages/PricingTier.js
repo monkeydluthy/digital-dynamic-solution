@@ -133,6 +133,14 @@ function PricingTier() {
               Compare all plans →
             </Link>
           </div>
+          <p className="mt-6">
+            <Link
+              to="/social-media"
+              className="text-primary-400 font-semibold hover:text-primary-300"
+            >
+              How our social media management service works →
+            </Link>
+          </p>
         </div>
       </div>
 

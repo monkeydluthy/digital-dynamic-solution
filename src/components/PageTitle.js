@@ -2,6 +2,10 @@ import { useEffect } from 'react';
 import { matchPath, useLocation } from 'react-router-dom';
 import { getTierBySlug, SITE_ORIGIN } from '../data/pricing';
 import { PRICING_CONTENT } from '../data/pricingContent';
+import {
+  SOCIAL_MEDIA_TITLE,
+  SOCIAL_MEDIA_DESCRIPTION,
+} from '../data/socialMediaPage';
 
 export const DEFAULT_TITLE =
   'DDS – Tampa Bay Digital Marketing for Local Service Businesses';
@@ -88,9 +92,8 @@ const PAGE_META = [
   },
   {
     path: '/social-media',
-    title: 'DDS – Tampa Bay Social Media Management for Local Service Businesses',
-    description:
-      'Done-for-you social media for Tampa Bay local service businesses — content, distribution, reviews, and reporting.',
+    title: SOCIAL_MEDIA_TITLE,
+    description: SOCIAL_MEDIA_DESCRIPTION,
   },
   {
     path: '/seo',

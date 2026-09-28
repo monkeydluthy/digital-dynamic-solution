@@ -210,8 +210,13 @@ function CaseStudy() {
                 See the Work Live
               </a>
             )}
-            <Link to={study.servicePath} className="btn-teal !bg-ink hover:!bg-primary-800">
-              {study.service}
+            <Link
+              to={study.servicePath}
+              className="btn-teal !bg-ink hover:!bg-primary-800"
+            >
+              {study.servicePath === '/social-media'
+                ? 'Social media management service'
+                : study.service}
             </Link>
             <Link
               to="/portfolio"
