@@ -94,7 +94,7 @@ export const HUB_FAQS = [
   {
     question: 'What about websites or custom software?',
     answer:
-      'Those are quoted per project. See Web Design & SEO or Custom App Development.',
+      'Those are quoted per project. See Custom Web Design or Custom App Development.',
   },
 ];
 

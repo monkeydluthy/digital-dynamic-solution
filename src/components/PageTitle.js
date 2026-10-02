@@ -6,6 +6,10 @@ import {
   SOCIAL_MEDIA_TITLE,
   SOCIAL_MEDIA_DESCRIPTION,
 } from '../data/socialMediaPage';
+import {
+  WEB_DESIGN_TITLE,
+  WEB_DESIGN_DESCRIPTION,
+} from '../data/webDesignPage';
 
 export const DEFAULT_TITLE =
   'DDS – Tampa Bay Digital Marketing for Local Service Businesses';
@@ -61,16 +65,19 @@ const PAGE_META = [
       'Real Tampa Bay digital marketing work for local service businesses, contractors, and custom products.',
   },
   {
+    path: '/services/web-design',
+    title: WEB_DESIGN_TITLE,
+    description: WEB_DESIGN_DESCRIPTION,
+  },
+  {
     path: '/web-design',
-    title: 'DDS – Tampa Bay Web Design & SEO for Local Service Businesses',
-    description:
-      'Custom, search-optimized websites for Tampa Bay contractors and local service businesses — built to turn searches into booked work.',
+    title: WEB_DESIGN_TITLE,
+    description: WEB_DESIGN_DESCRIPTION,
   },
   {
     path: '/web-design-seo',
-    title: 'DDS – Tampa Bay Web Design & SEO for Local Service Businesses',
-    description:
-      'Custom, search-optimized websites for Tampa Bay contractors and local service businesses — built to turn searches into booked work.',
+    title: WEB_DESIGN_TITLE,
+    description: WEB_DESIGN_DESCRIPTION,
   },
   {
     path: '/internet-marketing',

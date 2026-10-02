@@ -206,7 +206,7 @@ export const PRICING_CONTENT = {
       heading: 'Need a website, SEO build-out, or custom tool alongside Pro?',
       body: 'Those are quoted per project.',
       links: [
-        { label: 'Web Design & SEO', to: '/web-design-seo' },
+        { label: 'Custom Web Design', to: '/services/web-design' },
         { label: 'Custom App Development', to: '/app-development' },
       ],
     },

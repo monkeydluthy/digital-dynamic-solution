@@ -81,7 +81,7 @@ function InternetMarketing() {
           },
           {
             title: 'Web Design & SEO',
-            to: '/web-design-seo',
+            to: '/services/web-design',
             description:
               'The site and local search work that marketing needs to convert.',
           },

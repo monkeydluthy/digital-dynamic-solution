@@ -121,10 +121,10 @@ function Pricing() {
           <p className="text-center text-sm text-muted mt-6 max-w-2xl mx-auto">
             Looking for websites or custom software? See{' '}
             <Link
-              to="/web-design-seo"
+              to="/services/web-design"
               className="text-primary-600 font-semibold hover:text-primary-500"
             >
-              Web Design &amp; SEO
+              Custom Web Design
             </Link>{' '}
             or{' '}
             <Link

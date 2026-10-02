@@ -41,10 +41,10 @@ function PricingTermsStrip() {
             </p>
             <p className="mt-3">
               <Link
-                to="/web-design-seo"
+                to="/services/web-design"
                 className="text-primary-400 hover:text-primary-300 text-sm font-medium"
               >
-                Web Design &amp; SEO
+                Custom Web Design
               </Link>
               <span className="text-white/40 mx-2">·</span>
               <Link

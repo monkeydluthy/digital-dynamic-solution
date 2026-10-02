@@ -74,8 +74,8 @@ function SEO() {
       <RelatedServices
         items={[
           {
-            title: 'Web Design & SEO',
-            to: '/web-design-seo',
+            title: 'Custom Web Design',
+            to: '/services/web-design',
             description:
               'A site built to rank locally and turn searches into calls.',
           },

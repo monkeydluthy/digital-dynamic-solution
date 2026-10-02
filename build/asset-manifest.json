@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.aedd7972.css",
-    "main.js": "/static/js/main.c60eca49.js",
+    "main.css": "/static/css/main.b46a5a72.css",
+    "main.js": "/static/js/main.8c63a84c.js",
     "static/media/rooflead-iq-logo.png": "/static/media/rooflead-iq-logo.feccc6f90d4263a0159f.png",
     "static/media/anj-logo.png": "/static/media/anj-logo.baaad75ad13ed0fc101f.png",
     "static/media/event.png": "/static/media/event.fd3afefb509ecb973bea.png",
@@ -24,11 +24,11 @@
     "static/media/anthony-headshot.jpg": "/static/media/anthony-headshot.70f4c88e5525df0fd0ee.jpg",
     "static/media/dds-monogram-color-on-dark.png": "/static/media/dds-monogram-color-on-dark.9ae56bebfe49a5661c75.png",
     "index.html": "/index.html",
-    "main.aedd7972.css.map": "/static/css/main.aedd7972.css.map",
-    "main.c60eca49.js.map": "/static/js/main.c60eca49.js.map"
+    "main.b46a5a72.css.map": "/static/css/main.b46a5a72.css.map",
+    "main.8c63a84c.js.map": "/static/js/main.8c63a84c.js.map"
   },
   "entrypoints": [
-    "static/css/main.aedd7972.css",
-    "static/js/main.c60eca49.js"
+    "static/css/main.b46a5a72.css",
+    "static/js/main.8c63a84c.js"
   ]
 }

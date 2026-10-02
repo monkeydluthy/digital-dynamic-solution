@@ -34,7 +34,9 @@ const coreServices = [
     description:
       'A site that looks sharp, ranks locally, and turns searchers into calls — built for contractors and service businesses.',
     icon: 'fa-laptop-code',
-    link: '/web-design-seo',
+    link: '/services/web-design',
+    cta: 'Explore custom web design',
+    ariaLabel: 'Custom web design in Tampa',
   },
   {
     title: 'Custom App Development',

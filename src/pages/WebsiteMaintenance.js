@@ -74,8 +74,8 @@ function WebsiteMaintenance() {
       <RelatedServices
         items={[
           {
-            title: 'Web Design & SEO',
-            to: '/web-design-seo',
+            title: 'Custom Web Design',
+            to: '/services/web-design',
             description:
               'A rebuild or redesign when maintenance is no longer enough.',
           },

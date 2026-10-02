@@ -82,7 +82,7 @@ function Consulting() {
         items={[
           {
             title: 'Web Design & SEO',
-            to: '/web-design-seo',
+            to: '/services/web-design',
             description:
               'The public site that feeds your app, bookings, and lead flow.',
           },

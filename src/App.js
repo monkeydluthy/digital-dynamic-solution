@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Navigate, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -48,8 +48,15 @@ function App() {
           <Route path="/case-studies/:slug" element={<CaseStudy />} />
 
           {/* Service Routes */}
-          <Route path="/web-design" element={<WebDesign />} />
-          <Route path="/web-design-seo" element={<WebDesign />} />
+          <Route path="/services/web-design" element={<WebDesign />} />
+          <Route
+            path="/web-design"
+            element={<Navigate to="/services/web-design" replace />}
+          />
+          <Route
+            path="/web-design-seo"
+            element={<Navigate to="/services/web-design" replace />}
+          />
           <Route path="/internet-marketing" element={<InternetMarketing />} />
           <Route path="/consulting" element={<Consulting />} />
           <Route path="/app-development" element={<Consulting />} />

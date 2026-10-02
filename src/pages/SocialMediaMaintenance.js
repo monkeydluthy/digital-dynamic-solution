@@ -86,7 +86,7 @@ function SocialMediaMaintenance() {
           },
           {
             title: 'Web Design & SEO',
-            to: '/web-design-seo',
+            to: '/services/web-design',
             description: 'Send social traffic to a site built to book the job.',
           },
         ]}

@@ -33,8 +33,9 @@ const coreServices = [
     description:
       'A site that looks sharp, ranks locally, and turns searchers into calls — built for contractors and service businesses.',
     icon: 'fa-laptop-code',
-    link: '/web-design-seo',
+    link: '/services/web-design',
     subItems: [
+      { title: 'Custom Web Design', link: '/services/web-design' },
       { title: 'Search Engine Optimization', link: '/seo' },
       { title: 'Customized Logo Design', link: '/logo-design' },
       { title: 'Website Maintenance', link: '/website-maintenance' },
@@ -70,7 +71,9 @@ function CoreServiceCard({ title, description, icon, link }) {
         aria-label={
           title === 'Social Media Management'
             ? 'Social media management service'
-            : undefined
+            : title === 'Web Design & SEO'
+              ? 'Custom web design in Tampa'
+              : undefined
         }
       >
         Learn More

@@ -54,8 +54,8 @@ const CASE_STUDIES = {
   'all-structure': {
     title: 'All Structure Maintenance',
     industry: 'General Contractor · Meriden, CT',
-    service: 'Web Design & SEO',
-    servicePath: '/web-design-seo',
+    service: 'Custom Web Design',
+    servicePath: '/services/web-design',
     logo: allStructureLogo,
     site: 'https://allstructuremaintenance.com',
     headlineResult: 'Lead-gen site with full conversion tracking',

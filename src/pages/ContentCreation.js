@@ -81,7 +81,7 @@ function ContentCreation() {
           },
           {
             title: 'Web Design & SEO',
-            to: '/web-design-seo',
+            to: '/services/web-design',
             description: 'Site copy and landing pages that rank and convert.',
           },
           {

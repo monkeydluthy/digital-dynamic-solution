@@ -75,7 +75,7 @@ function LogoDesign() {
         items={[
           {
             title: 'Web Design & SEO',
-            to: '/web-design-seo',
+            to: '/services/web-design',
             description:
               'Put the new mark on a site that looks sharp and converts.',
           },

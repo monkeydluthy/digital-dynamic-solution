@@ -164,7 +164,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="/web-design-seo"
+                  to="/services/web-design"
                   className="text-gray-400 hover:text-primary-400"
                 >
                   Web Design &amp; SEO
