@@ -61,7 +61,11 @@ function App() {
           <Route path="/consulting" element={<Consulting />} />
           <Route path="/app-development" element={<Consulting />} />
           <Route path="/social-media" element={<SocialMedia />} />
-          <Route path="/seo" element={<SEO />} />
+          <Route path="/services/seo" element={<SEO />} />
+          <Route
+            path="/seo"
+            element={<Navigate to="/services/seo" replace />}
+          />
           <Route path="/logo-design" element={<LogoDesign />} />
           <Route path="/website-maintenance" element={<WebsiteMaintenance />} />
           <Route path="/sm-maintenance" element={<SocialMediaMaintenance />} />

@@ -36,7 +36,7 @@ const coreServices = [
     link: '/services/web-design',
     subItems: [
       { title: 'Custom Web Design', link: '/services/web-design' },
-      { title: 'Search Engine Optimization', link: '/seo' },
+      { title: 'Search Engine Optimization', link: '/services/seo' },
       { title: 'Customized Logo Design', link: '/logo-design' },
       { title: 'Website Maintenance', link: '/website-maintenance' },
       { title: 'Internet Marketing', link: '/internet-marketing' },

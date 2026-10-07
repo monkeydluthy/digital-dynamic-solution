@@ -81,7 +81,7 @@ function WebsiteMaintenance() {
           },
           {
             title: 'Search Engine Optimization',
-            to: '/seo',
+            to: '/services/seo',
             description:
               'Keep local rankings healthy while the site stays current.',
           },

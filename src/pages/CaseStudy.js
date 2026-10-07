@@ -39,16 +39,20 @@ const CASE_STUDIES = {
     headlineResult: '39 Google reviews in 6 months',
     context:
       'A local stump-grinding operator with no Google presence — invisible in local search and Maps, with no reviews to earn trust from nearby homeowners.',
+    seoPath: '/services/seo',
     whatWeDid: [
       'Set up and fully optimized the Google Business Profile from scratch — categories, service area, services, photos.',
       'Built a review-generation system that converts completed jobs into steady Google reviews.',
       'Positioned the profile to capture local “near me” and Maps searches in its service area.',
+      'Compressed images and added robots.txt and a sitemap so Google can crawl the site.',
     ],
     results: [
       '39 Google reviews in 6 months on a brand-new profile',
       'More than one new review per week on average',
       '80 profile views in a recent single week across Search & Maps',
       'Actively surfacing when homeowners search locally',
+      'Mobile load time (LCP) about 55s to 3.4s after image compression plus robots.txt and sitemap fixes',
+      'PageSpeed SEO score 83 to 92',
     ],
   },
   'all-structure': {
@@ -56,6 +60,7 @@ const CASE_STUDIES = {
     industry: 'General Contractor · Meriden, CT',
     service: 'Custom Web Design',
     servicePath: '/services/web-design',
+    seoPath: '/services/seo',
     logo: allStructureLogo,
     site: 'https://allstructuremaintenance.com',
     headlineResult: 'Lead-gen site with full conversion tracking',
@@ -69,6 +74,7 @@ const CASE_STUDIES = {
     ],
     results: [
       'Qualified inbound project inquiries every month via CTAs & forms',
+      '13 CTA clicks and 8 form submissions year to date in GA4',
       'Complete funnel visibility — click to form submission',
       'Tracking most contractor sites don’t have — decisions driven by data',
       'Ongoing optimization — tightening the form to convert more inquiries',
@@ -218,6 +224,14 @@ function CaseStudy() {
                 ? 'Social media management service'
                 : study.service}
             </Link>
+            {study.seoPath && (
+              <Link
+                to={study.seoPath}
+                className="btn-teal !bg-ink hover:!bg-primary-800"
+              >
+                Local SEO
+              </Link>
+            )}
             <Link
               to="/portfolio"
               className="inline-block px-8 py-3 rounded-lg border-2 border-primary-500 text-primary-600 font-semibold hover:bg-mint transition-colors"

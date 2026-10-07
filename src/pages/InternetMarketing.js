@@ -87,7 +87,7 @@ function InternetMarketing() {
           },
           {
             title: 'Search Engine Optimization',
-            to: '/seo',
+            to: '/services/seo',
             description:
               'Rankings, Google Business, and pages built for local searches.',
           },

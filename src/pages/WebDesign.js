@@ -277,7 +277,7 @@ function WebDesign() {
         items={[
           {
             title: 'Search Engine Optimization',
-            to: '/seo',
+            to: '/services/seo',
             description:
               'Local rankings and Google Business work that sit on top of a site built to convert.',
           },

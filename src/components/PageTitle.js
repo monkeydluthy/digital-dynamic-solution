@@ -10,6 +10,7 @@ import {
   WEB_DESIGN_TITLE,
   WEB_DESIGN_DESCRIPTION,
 } from '../data/webDesignPage';
+import { SEO_TITLE, SEO_DESCRIPTION } from '../data/seoPage';
 
 export const DEFAULT_TITLE =
   'DDS – Tampa Bay Digital Marketing for Local Service Businesses';
@@ -103,10 +104,15 @@ const PAGE_META = [
     description: SOCIAL_MEDIA_DESCRIPTION,
   },
   {
+    path: '/services/seo',
+    title: SEO_TITLE,
+    description: SEO_DESCRIPTION,
+  },
+  {
     path: '/seo',
-    title: 'DDS – Tampa Bay SEO for Local Service Businesses',
-    description:
-      'Local SEO for Tampa Bay service businesses — get found in search and Maps when nearby customers are ready to book.',
+    title: SEO_TITLE,
+    description: SEO_DESCRIPTION,
+    canonicalPath: '/services/seo',
   },
   {
     path: '/logo-design',
@@ -205,7 +211,9 @@ function getPageMeta(pathname) {
     return {
       title: page.title,
       description: page.description,
-      canonical: `${SITE_ORIGIN}${page.path === '/' ? '/' : page.path}`,
+      canonical: `${SITE_ORIGIN}${
+        page.canonicalPath || (page.path === '/' ? '/' : page.path)
+      }`,
     };
   }
 

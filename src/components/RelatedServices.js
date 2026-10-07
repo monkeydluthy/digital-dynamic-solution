@@ -12,7 +12,11 @@ function RelatedServices({ items }) {
         </p>
         <div
           className={`grid grid-cols-1 gap-6 ${
-            items.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'
+            items.length === 4
+              ? 'md:grid-cols-2 lg:grid-cols-4'
+              : items.length === 2
+                ? 'md:grid-cols-2'
+                : 'md:grid-cols-3'
           }`}
         >
           {items.map((item) => (

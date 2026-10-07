@@ -167,7 +167,15 @@ function Footer() {
                   to="/services/web-design"
                   className="text-gray-400 hover:text-primary-400"
                 >
-                  Web Design &amp; SEO
+                  Custom Web Design
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/seo"
+                  className="text-gray-400 hover:text-primary-400"
+                >
+                  Local SEO
                 </Link>
               </li>
               <li>
