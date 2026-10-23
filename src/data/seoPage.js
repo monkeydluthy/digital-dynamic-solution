@@ -1,4 +1,4 @@
-import { SITE_ORIGIN, ORGANIZATION_ID, PHONE } from './pricing';
+import { SITE_ORIGIN, ORGANIZATION_ID } from './pricing';
 
 export const SEO_PATH = '/services/seo';
 
@@ -79,13 +79,7 @@ export function buildSeoJsonLd() {
       'Wesley Chapel, FL',
       'St. Petersburg, FL',
     ],
-    provider: {
-      '@id': ORGANIZATION_ID,
-      '@type': 'LocalBusiness',
-      name: 'Digital Dynamic Solution',
-      url: SITE_ORIGIN,
-      telephone: PHONE.tel,
-    },
+    provider: { '@id': ORGANIZATION_ID },
     description:
       'Local SEO for Tampa Bay service businesses: technical fixes, Google Business Profile work, on-page optimization, and plain-English monthly reporting.',
   };
