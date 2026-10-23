@@ -10,6 +10,31 @@ export const SEO_DESCRIPTION =
 
 export const SEO_CANONICAL = `${SITE_ORIGIN}${SEO_PATH}`;
 
+export const SEO_INDUSTRIES = [
+  {
+    title: 'Contractors and home services',
+    body: 'Homeowners search “near me” the moment something breaks or needs cutting. We set up your Google Business Profile, service pages and reviews so you show up when they do.',
+    note: 'Tree care, roofing, stump grinding, maintenance',
+    to: '/case-studies/ma-stump-grinding',
+  },
+  {
+    title: 'Restaurants and cafes',
+    body: 'Menus, hours and directions are the most searched things about a restaurant. We keep them accurate across Google, Maps and your site.',
+  },
+  {
+    title: 'Salons, barbershops and tattoo studios',
+    body: 'Booking intent is local and visual. We build the pages, profile and photo content that turn searches into appointments.',
+  },
+  {
+    title: 'Pool and outdoor services',
+    body: 'Seasonal demand means the pages and profile need to be right before the rush, not during it.',
+  },
+  {
+    title: 'Law firms and professional services',
+    body: 'Clients compare a few firms before calling. Clear practice pages and a trusted local profile make yours one of them.',
+  },
+];
+
 export const SEO_FAQS = [
   {
     question: 'How long until I see results?',
