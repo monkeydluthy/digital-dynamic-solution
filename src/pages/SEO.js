@@ -4,7 +4,7 @@ import PricingCta from '../components/PricingCta';
 import PricingFaq from '../components/PricingFaq';
 import RelatedServices from '../components/RelatedServices';
 import { PHONE } from '../data/pricing';
-import { SEO_FAQS, buildSeoJsonLd } from '../data/seoPage';
+import { SEO_FAQS, SEO_INDUSTRIES, buildSeoJsonLd } from '../data/seoPage';
 import mnaStumpLogo from '../assets/images/mna-stump.jpg';
 import allStructureLogo from '../assets/images/all-structure.png';
 
@@ -207,7 +207,66 @@ function SEO() {
         </div>
       </section>
 
-      <section className="bg-mint py-14 md:py-16">
+      <section
+        id="seo-industries"
+        className="bg-mint py-14 md:py-16"
+      >
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-ink mb-4 text-center">
+            Local SEO for Tampa Bay service businesses
+          </h2>
+          <p className="text-body text-lg leading-relaxed max-w-3xl mx-auto text-center mb-8">
+            We work with local businesses that live on calls and bookings from
+            nearby customers.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {SEO_INDUSTRIES.map((item) => {
+              const cardClassName =
+                'bg-card rounded-xl p-6 md:p-8 border border-primary-100 flex flex-col h-full';
+              const content = (
+                <>
+                  <h3 className="text-lg font-bold text-ink mb-3">
+                    {item.title}
+                  </h3>
+                  {item.note ? (
+                    <p className="text-sm font-medium text-body -mt-2 mb-3">
+                      {item.note}
+                    </p>
+                  ) : null}
+                  <p className="text-body leading-relaxed flex-grow">
+                    {item.body}
+                  </p>
+                  {item.to ? (
+                    <span className="text-primary-600 font-semibold text-sm mt-4">
+                      Read the case study →
+                    </span>
+                  ) : null}
+                </>
+              );
+
+              if (item.to) {
+                return (
+                  <Link
+                    key={item.title}
+                    to={item.to}
+                    className={`${cardClassName} hover:shadow-lg transition-shadow`}
+                  >
+                    {content}
+                  </Link>
+                );
+              }
+
+              return (
+                <div key={item.title} className={cardClassName}>
+                  {content}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-14 md:py-16 border-t border-primary-100">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-bold text-ink mb-6 text-center">
             What results look like
