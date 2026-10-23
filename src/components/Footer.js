@@ -204,6 +204,7 @@ function Footer() {
               <li>
                 <a
                   href="tel:+18139970321"
+                  data-location="footer"
                   className="hover:text-primary-400 transition-colors font-medium text-white"
                 >
                   813.997.0321

@@ -180,6 +180,7 @@ function SocialMedia() {
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
                 <a
                   href={`tel:${PHONE.tel}`}
+                  data-location="social_media"
                   className="btn-teal text-lg !px-8 !py-4"
                 >
                   Call or text {PHONE.display}

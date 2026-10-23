@@ -210,7 +210,7 @@ function NightSync() {
             Have an idea, or a process that should be software? Let&apos;s build
             it.
           </p>
-          <a href="tel:+18139970321" className="btn-teal text-lg !px-10 !py-4">
+          <a href="tel:+18139970321" data-location="night_sync" className="btn-teal text-lg !px-10 !py-4">
             Call or text 813.997.0321
           </a>
         </div>

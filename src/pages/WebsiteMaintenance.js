@@ -32,7 +32,7 @@ function WebsiteMaintenance() {
               Keep the site fast, secure, and current — updates, backups, and
               support so you can stay focused on the work.
             </p>
-            <a href="tel:+18139970321" className="btn-teal text-lg !px-8 !py-4">
+            <a href="tel:+18139970321" data-location="website_maintenance_hero" className="btn-teal text-lg !px-8 !py-4">
               Call or text 813.997.0321
             </a>
           </div>
@@ -100,7 +100,7 @@ function WebsiteMaintenance() {
           <p className="text-xl md:text-2xl text-white font-medium mb-8">
             Want the site looked after?
           </p>
-          <a href="tel:+18139970321" className="btn-teal text-lg !px-10 !py-4">
+          <a href="tel:+18139970321" data-location="website_maintenance_bottom_cta" className="btn-teal text-lg !px-10 !py-4">
             Call or text 813.997.0321
           </a>
         </div>

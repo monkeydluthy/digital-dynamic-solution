@@ -3,6 +3,7 @@ import { Navigate, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import GaEvents from './components/GaEvents';
 import PageTitle from './components/PageTitle';
 
 // Pages
@@ -32,6 +33,7 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <ScrollToTop />
+      <GaEvents />
       <PageTitle />
       <Header />
       <main className="flex-grow">

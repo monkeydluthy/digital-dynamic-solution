@@ -249,7 +249,7 @@ function CaseStudy() {
           <p className="text-xl md:text-2xl text-white font-medium mb-8">
             Want results like these for your business?
           </p>
-          <a href="tel:+18139970321" className="btn-teal text-lg !px-10 !py-4">
+          <a href="tel:+18139970321" data-location="case_study" className="btn-teal text-lg !px-10 !py-4">
             Call or text 813.997.0321
           </a>
         </div>

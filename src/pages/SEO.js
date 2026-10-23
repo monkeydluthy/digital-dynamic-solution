@@ -111,11 +111,12 @@ function SEO() {
               reporting, built for local service businesses.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link to="/contact" className="btn-teal text-lg !px-8 !py-4">
+              <Link to="/contact" data-cta="seo_contact_top" className="btn-teal text-lg !px-8 !py-4">
                 Get a free quote
               </Link>
               <a
                 href={`tel:${PHONE.tel}`}
+                data-location="seo"
                 className="btn-teal-outline text-lg !px-8 !py-4"
               >
                 Call or text {PHONE.display}
@@ -297,7 +298,7 @@ function SEO() {
             how competitive your market is. Plans are month-to-month. Get a
             free quote and we&apos;ll tell you what it takes.
           </p>
-          <Link to="/contact" className="btn-teal">
+          <Link to="/contact" data-cta="seo_contact_bottom" className="btn-teal">
             Get a free quote
           </Link>
         </div>

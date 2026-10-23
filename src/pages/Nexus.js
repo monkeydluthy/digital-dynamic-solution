@@ -111,7 +111,7 @@ function Nexus() {
             &amp; marketing services — a multi-client command center most
             agencies only wish they had.
           </p>
-          <a href="tel:+18139970321" className="btn-teal text-lg !px-8 !py-4">
+          <a href="tel:+18139970321" data-location="nexus_hero" className="btn-teal text-lg !px-8 !py-4">
             Call or text 813.997.0321
           </a>
         </div>
@@ -184,6 +184,7 @@ function Nexus() {
           <div className="flex flex-wrap gap-4 justify-center">
             <a
               href="tel:+18139970321"
+              data-location="nexus_bottom_cta"
               className="btn-teal text-lg !px-10 !py-4"
             >
               Call or text 813.997.0321

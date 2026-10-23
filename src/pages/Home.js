@@ -74,6 +74,7 @@ function Home() {
               >
                 <a
                   href="tel:+18139970321"
+                  data-location="home_hero"
                   className="btn-teal text-lg !px-8 !py-4"
                 >
                   Call or text 813.997.0321
@@ -211,12 +212,14 @@ function Home() {
           >
             <a
               href="tel:+18139970321"
+              data-location="home_bottom_cta"
               className="btn-teal text-lg !px-10 !py-4"
             >
               Call or text 813.997.0321
             </a>
             <Link
               to="/contact"
+              data-cta="home_contact"
               className="btn-teal-outline text-lg !px-10 !py-4"
             >
               Send a Message

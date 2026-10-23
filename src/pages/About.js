@@ -217,12 +217,14 @@ function About() {
           <div className="flex flex-wrap gap-4 justify-center">
             <a
               href="tel:+18139970321"
+              data-location="about"
               className="btn-teal text-lg !px-10 !py-4"
             >
               Call or text 813.997.0321
             </a>
             <Link
               to="/contact"
+              data-cta="about_contact"
               className="btn-teal-outline text-lg !px-10 !py-4"
             >
               Send a Message

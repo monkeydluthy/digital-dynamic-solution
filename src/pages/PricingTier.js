@@ -122,6 +122,7 @@ function PricingTier() {
           <div className="flex flex-wrap gap-4 justify-center">
             <a
               href={`tel:${PHONE.tel}`}
+              data-location="pricing_tier"
               className="btn-teal text-lg !px-8 !py-4"
             >
               Call or text {PHONE.display}
@@ -285,7 +286,11 @@ function PricingTier() {
               {content.nextTier.body}
             </p>
             {content.nextTier.type === 'tier' ? (
-              <Link to={content.nextTier.ctaTo} className="btn-teal">
+              <Link
+                to={content.nextTier.ctaTo}
+                data-cta={`tier_next_${content.nextTier.ctaTo.split('/').pop()}`}
+                className="btn-teal"
+              >
                 {content.nextTier.ctaLabel} →
               </Link>
             ) : (

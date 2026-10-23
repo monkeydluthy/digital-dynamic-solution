@@ -37,6 +37,7 @@ function ContactInfo({ icon, title, content, link }) {
         {link ? (
           <a
             href={link}
+            data-location="contact_info"
             className="text-body hover:text-primary-500 transition-colors"
           >
             {content}
@@ -93,6 +94,7 @@ function Contact() {
       }
 
       setSubmitStatus('success');
+      window.gtag?.('event', 'generate_lead', { method: 'contact_page' });
       form.current.reset();
     } catch (error) {
       setSubmitStatus('error');
@@ -130,6 +132,7 @@ function Contact() {
             <motion.div variants={fadeInUp}>
               <a
                 href="tel:+18139970321"
+                data-location="contact_hero"
                 className="btn-teal text-lg !px-8 !py-4"
               >
                 Call or text 813.997.0321
@@ -288,7 +291,7 @@ function Contact() {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Call or text — we&apos;re easy to reach.
           </p>
-          <a href="tel:+18139970321" className="btn-teal text-lg !px-10 !py-4">
+          <a href="tel:+18139970321" data-location="contact_bottom_cta" className="btn-teal text-lg !px-10 !py-4">
             Call or text 813.997.0321
           </a>
         </div>
