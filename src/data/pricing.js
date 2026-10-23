@@ -58,8 +58,8 @@ export const PHONE = {
 };
 
 export const SOCIAL_PROFILES = {
-  facebook: 'https://www.facebook.com/digitaldynamicsolution/',
-  linkedin: 'https://www.linkedin.com/in/anthony-luth/',
+  facebook: 'https://www.facebook.com/digdysol/',
+  linkedin: 'https://www.linkedin.com/company/digital-dynamic-solution-llc',
 };
 
 export const SITE_ORIGIN = 'https://digitaldynamicsolution.com';

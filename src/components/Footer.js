@@ -32,7 +32,7 @@ function Footer() {
             </p>
             <div className="flex justify-center md:justify-start space-x-4">
               <a
-                href="https://www.facebook.com/digitaldynamicsolution/"
+                href="https://www.facebook.com/digdysol/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary-400 transition-colors"
@@ -50,7 +50,7 @@ function Footer() {
                 <i className="fab fa-twitter"></i>
               </a>
               <a
-                href="https://www.linkedin.com/in/anthony-luth/"
+                href="https://www.linkedin.com/company/digital-dynamic-solution-llc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary-400 transition-colors"

@@ -8,6 +8,7 @@ import {
   formatPrice,
   PHONE,
   SITE_ORIGIN,
+  ORGANIZATION_ID,
 } from '../data/pricing';
 import { PRICING_CONTENT } from '../data/pricingContent';
 
@@ -55,11 +56,7 @@ function PricingTier() {
         name: `${tier.name} Social Media Management`,
         serviceType: 'Social Media Management',
         description: content.meta,
-        provider: {
-          '@type': 'Organization',
-          name: 'Digital Dynamic Solution LLC',
-          url: SITE_ORIGIN,
-        },
+        provider: { '@id': ORGANIZATION_ID },
         areaServed: {
           '@type': 'Country',
           name: 'United States',

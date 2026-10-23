@@ -1,4 +1,4 @@
-import { SITE_ORIGIN, ORGANIZATION_ID, PHONE } from './pricing';
+import { SITE_ORIGIN, ORGANIZATION_ID } from './pricing';
 
 export const WEB_DESIGN_PATH = '/services/web-design';
 
@@ -48,13 +48,7 @@ export function buildWebDesignJsonLd() {
       'Wesley Chapel, FL',
       'St. Petersburg, FL',
     ],
-    provider: {
-      '@id': ORGANIZATION_ID,
-      '@type': 'LocalBusiness',
-      name: 'Digital Dynamic Solution',
-      url: SITE_ORIGIN,
-      telephone: PHONE.tel,
-    },
+    provider: { '@id': ORGANIZATION_ID },
     description:
       "Custom web design for Tampa Bay businesses — hand-built sites designed around the client's actual business and customers, not a template.",
   };

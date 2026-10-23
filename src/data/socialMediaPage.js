@@ -2,8 +2,6 @@ import {
   TIERS,
   SITE_ORIGIN,
   ORGANIZATION_ID,
-  PHONE,
-  SOCIAL_PROFILES,
   formatPrice,
   formatSetupFeeRange,
 } from './pricing';
@@ -85,21 +83,6 @@ export function buildSocialMediaJsonLd() {
             url: `${SITE_ORIGIN}/pricing/${tier.slug}`,
           })),
         },
-      },
-      {
-        '@type': 'ProfessionalService',
-        '@id': ORGANIZATION_ID,
-        name: 'Digital Dynamic Solution LLC',
-        url: SITE_ORIGIN,
-        logo: `${SITE_ORIGIN}/icons/original-logo.png`,
-        telephone: PHONE.schema,
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Tampa',
-          addressRegion: 'FL',
-          addressCountry: 'US',
-        },
-        sameAs: [SOCIAL_PROFILES.facebook, SOCIAL_PROFILES.linkedin],
       },
       {
         '@type': 'FAQPage',
