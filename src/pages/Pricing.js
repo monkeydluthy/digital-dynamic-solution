@@ -65,6 +65,7 @@ function Pricing() {
             if that means the smaller plan.{' '}
             <a
               href={`tel:${PHONE.tel}`}
+              data-location="pricing_hub"
               className="text-primary-400 font-semibold hover:text-primary-300"
             >
               {PHONE.display}

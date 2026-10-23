@@ -14,11 +14,12 @@ function PricingCta({
         </h2>
         <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">{subhead}</p>
         <div className="flex flex-wrap gap-4 justify-center">
-          <a href={`tel:${PHONE.tel}`} className="btn-teal text-lg !px-10 !py-4">
+          <a href={`tel:${PHONE.tel}`} data-location="pricing_cta" className="btn-teal text-lg !px-10 !py-4">
             Call or text {PHONE.display}
           </a>
           <Link
             to="/contact"
+            data-cta="pricing_cta_contact"
             className="btn-teal-outline text-lg !px-10 !py-4"
           >
             Send a Message

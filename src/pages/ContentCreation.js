@@ -32,7 +32,7 @@ function ContentCreation() {
               Copy and creative that sound like your business — for the site,
               social, email, and the pages people actually read.
             </p>
-            <a href="tel:+18139970321" className="btn-teal text-lg !px-8 !py-4">
+            <a href="tel:+18139970321" data-location="content_creation_hero" className="btn-teal text-lg !px-8 !py-4">
               Call or text 813.997.0321
             </a>
           </div>
@@ -98,7 +98,7 @@ function ContentCreation() {
           <p className="text-xl md:text-2xl text-white font-medium mb-8">
             Need content that sounds like you?
           </p>
-          <a href="tel:+18139970321" className="btn-teal text-lg !px-10 !py-4">
+          <a href="tel:+18139970321" data-location="content_creation_bottom_cta" className="btn-teal text-lg !px-10 !py-4">
             Call or text 813.997.0321
           </a>
         </div>

@@ -212,7 +212,7 @@ function Services() {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Call or text — we&apos;ll match you to the right core line.
           </p>
-          <a href="tel:+18139970321" className="btn-teal text-lg !px-10 !py-4">
+          <a href="tel:+18139970321" data-location="services" className="btn-teal text-lg !px-10 !py-4">
             Call or text 813.997.0321
           </a>
         </div>

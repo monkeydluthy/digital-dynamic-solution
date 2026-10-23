@@ -58,7 +58,7 @@ function Header() {
             <Link to="/contact" className="hover:text-primary-400 transition-colors">
               Contact
             </Link>
-            <a href="tel:+18139970321" className="btn-teal !px-5 !py-2 text-sm">
+            <a href="tel:+18139970321" data-location="header" className="btn-teal !px-5 !py-2 text-sm">
               813.997.0321
             </a>
           </div>
@@ -109,6 +109,7 @@ function Header() {
             </Link>
             <a
               href="tel:+18139970321"
+              data-location="header_mobile"
               className="btn-teal w-64 text-center"
               onClick={() => setIsOpen(false)}
             >

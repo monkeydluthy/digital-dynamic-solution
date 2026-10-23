@@ -32,7 +32,7 @@ function InternetMarketing() {
               Campaigns that reach the right people and turn attention into
               booked work — planned, run, and measured.
             </p>
-            <a href="tel:+18139970321" className="btn-teal text-lg !px-8 !py-4">
+            <a href="tel:+18139970321" data-location="internet_marketing_hero" className="btn-teal text-lg !px-8 !py-4">
               Call or text 813.997.0321
             </a>
           </div>
@@ -100,7 +100,7 @@ function InternetMarketing() {
           <p className="text-xl md:text-2xl text-white font-medium mb-8">
             Ready to grow your online presence?
           </p>
-          <a href="tel:+18139970321" className="btn-teal text-lg !px-10 !py-4">
+          <a href="tel:+18139970321" data-location="internet_marketing_bottom_cta" className="btn-teal text-lg !px-10 !py-4">
             Call or text 813.997.0321
           </a>
         </div>

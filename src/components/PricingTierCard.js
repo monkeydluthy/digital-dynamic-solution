@@ -61,6 +61,7 @@ function PricingTierCard({
       {compact ? (
         <Link
           to={`/pricing/${tier.slug}`}
+          data-cta={`tier_${tier.slug}`}
           className="mt-auto text-primary-600 font-semibold text-sm hover:text-primary-500"
         >
           See what&apos;s included →
@@ -68,6 +69,7 @@ function PricingTierCard({
       ) : showDetailsLink ? (
         <Link
           to={`/pricing/${tier.slug}`}
+          data-cta={`tier_${tier.slug}`}
           className={`mt-auto w-full text-center ${
             tier.popular ? 'btn-teal' : 'btn-teal !bg-ink hover:!bg-primary-800'
           }`}
