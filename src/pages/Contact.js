@@ -1,7 +1,12 @@
 import React, { useState, useRef } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const CONTACT_EMAIL = 'luthdigitalconsult@gmail.com';
+
+// /contact?ref=google-check comes from the Google Business Profile page.
+const GOOGLE_CHECK_REF = 'google-check';
+const GOOGLE_CHECK_MESSAGE = 'Free Google profile look. Business name: / Link:';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -54,6 +59,8 @@ function Contact() {
   const form = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const [searchParams] = useSearchParams();
+  const isGoogleCheck = searchParams.get('ref') === GOOGLE_CHECK_REF;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -94,7 +101,9 @@ function Contact() {
       }
 
       setSubmitStatus('success');
-      window.gtag?.('event', 'generate_lead', { method: 'contact_page' });
+      window.gtag?.('event', 'generate_lead', {
+        method: isGoogleCheck ? 'google_check' : 'contact_page',
+      });
       form.current.reset();
     } catch (error) {
       setSubmitStatus('error');
@@ -213,6 +222,7 @@ function Contact() {
                       id="message"
                       name="message"
                       rows="4"
+                      defaultValue={isGoogleCheck ? GOOGLE_CHECK_MESSAGE : undefined}
                       className="w-full px-4 py-2 border border-primary-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                       required
                     ></textarea>

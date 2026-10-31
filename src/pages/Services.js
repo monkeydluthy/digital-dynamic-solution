@@ -37,6 +37,10 @@ const coreServices = [
     subItems: [
       { title: 'Custom Web Design', link: '/services/web-design' },
       { title: 'Search Engine Optimization', link: '/services/seo' },
+      {
+        title: 'Google Business Profile Optimization',
+        link: '/services/google-business-profile',
+      },
       { title: 'Customized Logo Design', link: '/logo-design' },
       { title: 'Website Maintenance', link: '/website-maintenance' },
       { title: 'Internet Marketing', link: '/internet-marketing' },
