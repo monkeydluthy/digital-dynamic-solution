@@ -50,19 +50,13 @@ function GoogleBusinessProfile() {
               When someone nearby searches for what you do, your Google profile
               is often the first thing they see.
             </p>
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
+            <div className="flex justify-center">
               <Link
                 to={GBP_CONTACT_PATH}
                 data-cta="gbp_hero"
                 className="btn-teal text-lg !px-8 !py-4 text-center"
               >
                 Get a free look at your Google profile
-              </Link>
-              <Link
-                to="/services/seo"
-                className="text-white font-semibold underline underline-offset-4 hover:text-primary-400"
-              >
-                Local SEO
               </Link>
             </div>
           </div>
@@ -85,6 +79,16 @@ function GoogleBusinessProfile() {
               </div>
             ))}
           </div>
+          <p className="text-body text-lg leading-relaxed max-w-3xl mx-auto text-center mt-8">
+            Google Business Profile work is one part of our{' '}
+            <Link
+              to="/services/seo"
+              className="text-primary-600 font-semibold hover:text-primary-500"
+            >
+              Local SEO service
+            </Link>
+            .
+          </p>
         </div>
       </section>
 
