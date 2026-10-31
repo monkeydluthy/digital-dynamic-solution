@@ -16,6 +16,19 @@ const workGroups = [
   {
     title: 'Local',
     body: 'Google Business Profile set up properly: categories, services, service area, regular photos, review requests, and the same name, address and phone on every listing.',
+    more: (
+      <>
+        {' '}
+        See what goes into{' '}
+        <Link
+          to="/services/google-business-profile"
+          className="text-primary-600 font-semibold hover:text-primary-500"
+        >
+          Google Business Profile optimization
+        </Link>
+        .
+      </>
+    ),
   },
   {
     title: 'On-page',
@@ -138,7 +151,10 @@ function SEO() {
                 className="bg-card rounded-xl p-6 md:p-8 border border-primary-100"
               >
                 <h3 className="text-lg font-bold text-ink mb-3">{item.title}</h3>
-                <p className="text-body leading-relaxed">{item.body}</p>
+                <p className="text-body leading-relaxed">
+                  {item.body}
+                  {item.more}
+                </p>
               </div>
             ))}
           </div>

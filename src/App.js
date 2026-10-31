@@ -19,6 +19,7 @@ import InternetMarketing from './pages/InternetMarketing';
 import Consulting from './pages/Consulting';
 import SocialMedia from './pages/SocialMedia';
 import SEO from './pages/SEO';
+import GoogleBusinessProfile from './pages/GoogleBusinessProfile';
 import LogoDesign from './pages/LogoDesign';
 import WebsiteMaintenance from './pages/WebsiteMaintenance';
 import SocialMediaMaintenance from './pages/SocialMediaMaintenance';
@@ -64,6 +65,10 @@ function App() {
           <Route path="/app-development" element={<Consulting />} />
           <Route path="/social-media" element={<SocialMedia />} />
           <Route path="/services/seo" element={<SEO />} />
+          <Route
+            path="/services/google-business-profile"
+            element={<GoogleBusinessProfile />}
+          />
           <Route
             path="/seo"
             element={<Navigate to="/services/seo" replace />}
